@@ -1,0 +1,120 @@
+\documentclass[12pt,letter]{article}
+
+\usepackage{amsfonts}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{polynom}
+\usepackage{amsthm}
+\usepackage{arcs}
+\usepackage{pifont}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{caption}
+\usepackage{subfigure}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}%
+% Absolute value symbol
+\usepackage{setspace}
+\doublespacing
+\usepackage{fullpage}
+
+\begin{document}
+
+%Begin title block%
+\title{Capsids and Stuff}
+\author{Charles Zahara}
+\maketitle
+%End title block%
+
+\section*{Authors note}
+
+\paragraph{}
+Theoretical mathematics, or pure mathematics as some would say, 
+Mathematics has always been a beautiful field full of excitement and discovery. From purely theoretical considerations to strictly \cite{Zlotnick:2005} applied problems the mathematician is never without mental stimulus. Its inspirations are everywhere and one needs only to be willing to \cite{Mannige:2009} ask why and how to be able to find a fantastic problem to consider. Although the sciences sometimes lack a willingness to work together, Biology is a great realm within which to discover new questions. \\
+
+To find challenging mathematical problems within Biology, one does not need to be an applied mathematician with decades of experience in modeling. Nor does one need to have an extensive background in Biology and science. All that is required is to be willing to examine systems and be willing to ask questions. One such inspiring place is the theory behind icosahedral virus capsids. \\
+
+\textbf{Only keep one of these paragraphs! Maybe merge them. I dunno. But NOT BOTH!!!!} \\
+
+The aim of this paper is to take the reader through the process of discovery of mathematical puzzles inspired by the physical world. We will first examine the very basic knowledge of viruses which is required to understand both the theories we will be looking at and why they are important. We will then ask questions left unanswered by the standard theories and papers and explore the mathematical problems they inspire. It is my goal that this paper shows that unique problems in math are everywhere (gross sentence, fix!) \\
+
+The goal of this paper is to be an entertaining introduction to the theory of icosahedral symmetry of virus capsids. It is intended to be a type of tour guide through the development and arguments of this theory. Although it is centered around the mathematics of why icosahedral shells work, it aims to be readable by anyone without external materials, extensive background reading, or a 6' by 20' wall of white board to work out gaps in equations. Hopefully the reader will come away understanding not only the form and function of icosahedral capsids, but also the amazing, challenging, and ultimately fun mathematical problems that arise within Biology. 
+
+\section{Introduction} %%%%% INTRODUCTION
+
+\paragraph{}
+Viruses have been shaping human history for millennia. From smallpox and polio to the yearly strains of flu and common cold, every generation has battled against these tiny creatures. They have wiped out civilizations and continue to kill millions every year. As such the study of their form and function remains important. \\
+
+In the simplest sense, viruses are composed of either DNA or RNA surrounded by a protein shell, called a capsid. [DEFINITION?] Viruses cannot copy themselves, but instead inject their genetic material into a host cell. The host cell is then taken over and forced to create copies of the virus genetic material and capsid proteins. Eventually, once it is filled to capacity, the host cell bursts open and the newly created capsids are expelled and proceed to a new host to repeat the process. \\
+
+The purpose of these capsids are to protect the virus genetic material as they move from host cell to host cell. This makes the capsid crucial in the infection process. It also means that understanding the structure and mechanics of the capsids may allow scientists to develop ways to disrupt their construction, thus eliminating the virus's ability to travel and infect new host cells. \\
+
+Viruses come in a variety of shapes and sizes, defined by their capsid shells. Some are long tubes, similar to a straw, classified as helical viruses, others are roughly spherical, and others are similar to a lollipop and called bacteriophages. Spherical viruses are the focus of this paper. In the 1950's it was suggested that spherical viruses capsids must conform to icosahedral symmetry. Although there are still many exceptions which continue to be examined, through decades of study and advances in microscope technology the theory that spherical capsids must have icosahedral symmetry has been confirmed both visually and computationally for most cases. What is often left unexplained in papers discussing spherical viruses is the mathematical reasoning behind the theory of their shape. This paper aims to fill in some of these gaps.
+
+\subsection{The History of Icosahedral Symmetry} %%%%% 1.1 History
+
+\paragraph{}
+In 1956 Crick and Watson wrote a paper entitled "Structure of Small Viruses." In this paper they hypothesized that "a small virus contains identical sub-units, packed together in a regular manner." This hypothesis was based upon X-ray photographs and electron micrographs of small viruses which consistently showed that viruses are very consistent in their shape. At the time, viruses either followed the rod shape of the tobacco-mosaic virus or the spherical shape of the turnip yellow mosaic virus (Tobacco studied by Tubingen and Berkley, turnip by Markham, page 473). \\
+
+Crick and Watson's claims about spherical viruses were heavily influenced by studies of rod-shaped viruses. The tobacco mosaic virus had been shown to consist of many structurally equivalent sub-units set about a central axis in a helical array (what does this mean?). The helical nature of the protein shell meant that they central axis of the tobacco mosaic virus was a symmetry axis, suggesting that each protein sub-unit exits in an identical environment. So for each sub-unit, its interactions with its neighbors are identical to that of its neighbor. Crick and Watson then extended these observations about the rod-shaped tobacco mosaic virus to spherical viruses.
+
+
+\section{T-numbers}
+\paragraph{}
+Caspar and Klug claim that their T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units found in a spherical capsid through the formula $P = 60T$. Recall this 60 is because the T number measure the number of triangular capsomers??? per side of the icosahedron and each capsomer is composed of 3 of the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better microscopes (get type and shit), as mathematicians we should ask, was this expected? Will the T-number always work for integers h and k. If we use Caspar and Klug's approach of placing one corner of a triangular face of the icosahedron at $(0,0)$ on a P6 (what does this mean) grid, will the third corner always fall on another integer valued point of the grid? To answer these questions we will take 2 different approaches. One requires no mathematics beyond high-school, and the second only requires a bit of knowledge of linear algebra.
+
+\subsection{The geometry approach}
+
+\paragraph{}
+The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. We will attempt to do this with no more than the skills of someone who has passed high school geometry. \\
+
+First let us recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If we did not know this formula off the top of our head, could we re-establish it? To begin, take an equilateral triangle with side length $b$ (figure). Draw a line from any corner to the midpoint of the opposing side. We now have 2 triangles. If we recall our triangle congruency theorems we can quickly see by the side-angle-side theorem that these triangles are congruent. This forces the angle we cut with our line to be bisected, and since we started with an equilateral triangle which has all angles equal to $60\degree$, we know the top angles are both $30\degree$ making our constructed line perpendicular to the base. \\
+
+We now wish to find the length of our constructed line $l$. Thankfully the pythagorean theorem is all we need for this.
+\begin{align*}
+b^2 &= \left(\dfrac{b} {2}\right)^2 + l^2 \\
+l^2 &= b^2 - \dfrac{b^2} {4} \\
+l^2 &= \dfrac{3} {4} \, b^2 \\
+l &= \sqrt{\dfrac{3} {4} \, b^2} \\
+l &= \dfrac{\sqrt{3}} {2} \, b
+\end{align*}
+Thus using our standard triangle area formula of $A = \rfrac{1} {2} \, base * height$ we get
+\begin{align*}
+A &= \dfrac{1} {2} \, b * \dfrac{\sqrt{3}} {2} \, b \\
+A &= \dfrac{\sqrt{3}} {4} \, b^2
+\end{align*} \\
+
+Recall our goal of establishing that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. Consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. We know 2 of the side lengths and wish to find side length b. Applying our previous work, we know that the exterior angle at point $(h,0)$ is $60\degree$, so if we drop a line down from point $(h,k)$ perpendicular to our t-axis, we obtain a triangle we have already worked with and know the dimensions of. Since it is $k$ units from $(h,0)$ to $(h,k)$ we know the perpendicular we just drew has length $\rfrac{\sqrt{3}} {2} \, b$ and the final leg of the triangle is $\rfrac 1 2 \, b$.
+
+\section{What do trapezoids have to do with it?}
+This entire section is wrong. You fucked up cause you're fucking retarded.
+
+\paragraph{}
+One constant and often unexplained attribute within works discussing icosahedral virus capsids is the authors' choice of subunit shape. Almost always the subunit is represented by a trapezoid with little to no explanation of why. If we recap what we know so far:
+\begin{enumerate}
+	\item Capsids are made up of pentamers and hexamers
+	\item Hexamers are capable of existing in a "flat" state
+	\item Three subunits need to make up an equilateral triangle
+\end{enumerate}
+Given these conditions, especially point (3), we may simply guess that trapezoids are used because every equilateral triangle can be split into three identical (right word?) isosceles trapezoids (See INSERT figure). 
+
+But then we must ask why not some other shape that also has this property. For instance, equilateral triangles can also be split into three identical isosceles triangles or three identical right kites. To demonstrate, extend angle bisectors from each corner of an equilateral triangle until they meet in its interior. The result is that we have split the initial equilateral triangle into three identical isosceles triangles. Or we could create perpendicular bisectors on each side of an equilateral triangle and extend them within the interior of the triangle until they meet. This will result in the triangle being split into three identical right kites. (see INSERT figure) So again we must ask, why are trapezoids the standard subunit shape if other shapes will also meet our criteria of being able to fit perfectly inside an equilateral triangle?
+
+Upon examination of shaded and deciphered images of real world icosahedral capsids we can see that the choice of trapezoid is simply due to their real world occurrence. (See [INSERT] capsid images) This was mentioned as early as (get date) by (get guy from mannige thesis)But this is a very interesting phenomenon. As pointed out by 
+
+
+
+\bibliographystyle{IEEEtranS}
+\bibliography{citetest}
+
+
+
+\end{document}
