@@ -17,6 +17,9 @@
 \usepackage{subfigure}
 \newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
 
+\newtheorem{definition}{Definition}
+\newtheorem*{definition*}{Definition}
+
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \makeatletter
 \let\oldabs\abs
@@ -34,32 +37,48 @@
 \maketitle
 %End title block%
 
-\section*{Authors note}
+\section{Introduction}
+
+% CITATION EXAMPE\cite[p 27]{Mannige:2009}
 
 \paragraph{}
-Theoretical mathematics, or pure mathematics as some would say, 
-Mathematics has always been a beautiful field full of excitement and discovery. From purely theoretical considerations to strictly \cite{Zlotnick:2005} applied problems the mathematician is never without mental stimulus. Its inspirations are everywhere and one needs only to be willing to \cite{Mannige:2009} ask why and how to be able to find a fantastic problem to consider. Although the sciences sometimes lack a willingness to work together, Biology is a great realm within which to discover new questions. \\
+Mathematics has always been a beautiful field full of excitement and discovery. From purely theoretical considerations to strictly applied problems the mathematician is never without mental stimulus. Its inspirations are everywhere and one needs only to be willing to ask why and how to be able to find a fantastic problem to consider. Although the sciences sometimes lack a willingness to work together, Biology is a great realm within which to discover new questions. To find challenging mathematical problems within Biology, one does not need to be an applied mathematician with decades of experience in modeling. Nor does one need to have an extensive background in Biology and science. All that is required is to be willing to examine systems and be willing to ask questions.\\
 
-To find challenging mathematical problems within Biology, one does not need to be an applied mathematician with decades of experience in modeling. Nor does one need to have an extensive background in Biology and science. All that is required is to be willing to examine systems and be willing to ask questions. One such inspiring place is the theory behind icosahedral virus capsids. \\
+The aim of this paper is to take the reader through the discovery of mathematical puzzles inspired by the physical world. Specifically these mathematical questions will come from the theory of spherical virus capsids. Two problems left unanswered by many of the works on the spherical virus capsids will be laid out and then multiple techniques for solving these problems will be detailed. Although this paper is centered around the mathematics of why icosahedral shells work, it aims to be readable by anyone without external materials, extensive background reading, or a 6' by 20' wall of white board to work out gaps in equations. This paper will ultimately demonstrate that unique problems in mathematics are everywhere and can often be solved with very basic tools if one is willing to apply some hard work and problem solving.\\
 
-\textbf{Only keep one of these paragraphs! Maybe merge them. I dunno. But NOT BOTH!!!!} \\
+A secondary objective of this paper is to be an entertaining introduction to the theory of icosahedral symmetry of virus capsids. It is intended to be a type of tour guide through the development and arguments of this theory. As such, the paper begins with a review of both past and present work on virus capsids. First the pivotal works on the theory of symmetry in spherical virus capsids will be summarized. Then a few selections of the current work both biologists and mathematicians are performing in the field of virus capsids will be examined. Hopefully the reader will come away understanding not only the form and function of icosahedral capsids, but also the amazing, challenging, and ultimately fun mathematical problems that arise within Biology. \\
 
-The aim of this paper is to take the reader through the process of discovery of mathematical puzzles inspired by the physical world. We will first examine the very basic knowledge of viruses which is required to understand both the theories we will be looking at and why they are important. We will then ask questions left unanswered by the standard theories and papers and explore the mathematical problems they inspire. It is my goal that this paper shows that unique problems in math are everywhere (gross sentence, fix!) \\
-
-The goal of this paper is to be an entertaining introduction to the theory of icosahedral symmetry of virus capsids. It is intended to be a type of tour guide through the development and arguments of this theory. Although it is centered around the mathematics of why icosahedral shells work, it aims to be readable by anyone without external materials, extensive background reading, or a 6' by 20' wall of white board to work out gaps in equations. Hopefully the reader will come away understanding not only the form and function of icosahedral capsids, but also the amazing, challenging, and ultimately fun mathematical problems that arise within Biology. 
-
-\section{Introduction} %%%%% INTRODUCTION
+\section{Background} %%%%% 1. Background
 
 \paragraph{}
-Viruses have been shaping human history for millennia. From smallpox and polio to the yearly strains of flu and common cold, every generation has battled against these tiny creatures. They have wiped out civilizations and continue to kill millions every year. As such the study of their form and function remains important. \\
+Viruses have been shaping human history for millennia. From smallpox and polio to the yearly strains of flu and common cold, every generation has battled against these tiny creatures. They have wiped out civilizations and continue to kill millions every year. As such the study of their form and function remains important.
 
-In the simplest sense, viruses are composed of either DNA or RNA surrounded by a protein shell, called a capsid. [DEFINITION?] Viruses cannot copy themselves, but instead inject their genetic material into a host cell. The host cell is then taken over and forced to create copies of the virus genetic material and capsid proteins. Eventually, once it is filled to capacity, the host cell bursts open and the newly created capsids are expelled and proceed to a new host to repeat the process. \\
+\begin{definition*}[Virus]
+Viruses are infectious agents composed of nucleic acid surrounded by a protein shell, called a capsid, and in some cases a membranous envelope. \normalfont{ \cite{Campbell:2002} }
+\end{definition*}
+While the above definition may make viruses seem like simple little organisms, they have a multitude of unique variations. Their nucleic acid genetic material may come in the form of DNA or RNA, depending on the virus, and be either single or double stranded. They can be rod shaped, roughly spherical, or in some cases rather complex in shape. Additionally, viruses are very effective organisms. They cannot replicate or reproduce themselves, but instead inject their genetic material into a host cell. The host cell is then taken over and forced to create copies of the virus genetic material and capsid proteins. Eventually, once it is filled to capacity, the host cell bursts open and the newly created capsids are expelled and proceed to a new host to repeat the process. \cite{Campbell:2002} See PICTURE FROM CAMPBELL PAGE 329. \\
 
-The purpose of these capsids are to protect the virus genetic material as they move from host cell to host cell. This makes the capsid crucial in the infection process. It also means that understanding the structure and mechanics of the capsids may allow scientists to develop ways to disrupt their construction, thus eliminating the virus's ability to travel and infect new host cells. \\
+The purpose of these capsid shells are to protect the virus genetic material as they move from host cell to host cell. This makes the capsid crucial in the infection process. It also means that understanding the structure and mechanics of the capsids may allow scientists to develop ways to disrupt their construction, thus eliminating the virus's ability to travel and infect new host cells. \\
 
-Viruses come in a variety of shapes and sizes, defined by their capsid shells. Some are long tubes, similar to a straw, classified as helical viruses, others are roughly spherical, and others are similar to a lollipop and called bacteriophages. Spherical viruses are the focus of this paper. In the 1950's it was suggested that spherical viruses capsids must conform to icosahedral symmetry. Although there are still many exceptions which continue to be examined, through decades of study and advances in microscope technology the theory that spherical capsids must have icosahedral symmetry has been confirmed both visually and computationally for most cases. What is often left unexplained in papers discussing spherical viruses is the mathematical reasoning behind the theory of their shape. This paper aims to fill in some of these gaps.
+As stated previously, viruses come in a variety of shapes and sizes, defined by their capsid shells. Some are long tubes, similar to a straw, classified as helical viruses, others are roughly spherical, classified as icosahedral viruses, and others do not fall into either of the two previously mentioned categories and are classified as complex. GET FIGURE TO SHOW THESE Spherical viruses are the focus of this paper. In the late 1950's and early 1960's it was suggested that spherical viruses capsids must conform to icosahedral symmetry \cite{Crick:1956}, \cite{Caspar:1962}. Although there are still many exceptions which continue to be examined, through decades of study and advances in microscope technology the theory that spherical capsids must have icosahedral symmetry has been confirmed both visually and computationally for most cases. What is often left unexplained in papers discussing spherical viruses is the mathematical reasoning behind the theory of their shape.\\
 
-\subsection{The History of Icosahedral Symmetry} %%%%% 1.1 History
+Before the history and theory are reviewed a few key definitions and their relationship are important.
+
+\begin{definition*}[Capsid]
+A viral capsid is a protein shell made up multiple copies of one, but in some cases a few, small proteins, which encloses and protects the viral genome.
+\end{definition*}
+\begin{definition*}[Capsomere]
+A capsomere is a repeated symmetric building unit for the viral capsid. They are made up of multiple proteins.
+\end{definition*}
+\begin{definition*}[Protomer]
+A promoter is a single protein unit of a capsomere.
+\end{definition*}
+
+The important note is that the protomers are the smallest unit. They are single asymmetric proteins. Capsomeres are built up of multiple protomers in a symmetric fashion. There can be multiple differently shaped capsomeres made from the same protomer sub-unit. The Capsid is the final shell, made up of the capsomere building blocks.
+
+
+
+\subsection{The History of Icosahedral Symmetry} %%%%% 2.1 History
 
 \paragraph{}
 In 1956 Crick and Watson wrote a paper entitled "Structure of Small Viruses." In this paper they hypothesized that "a small virus contains identical sub-units, packed together in a regular manner." This hypothesis was based upon X-ray photographs and electron micrographs of small viruses which consistently showed that viruses are very consistent in their shape. At the time, viruses either followed the rod shape of the tobacco-mosaic virus or the spherical shape of the turnip yellow mosaic virus (Tobacco studied by Tubingen and Berkley, turnip by Markham, page 473). \\
@@ -112,8 +131,8 @@ Upon examination of shaded and deciphered images of real world icosahedral capsi
 
 
 
-\bibliographystyle{IEEEtranS}
-\bibliography{citetest}
+\bibliographystyle{IEEEtran}
+\bibliography{Capsid_Cites}
 
 
 
