@@ -136,18 +136,28 @@ While Caspar and Klug ultimately disproved a flaw in Crick and Watson's theory f
 
 The final important observation made of the helical viruses was that they were flexible. The rod like capsids could bend and flex without breaking. Recalling that the helical capsids are made up only of protomeres, the individual proteins, this meant that the inter-protein bonds did not have to be perfectly identical. The bonds were allowed to vary slightly, or be quasi-equivalent \cite[p 7]{Caspar:1962}. This discovery helped lead to the theory of quasi-equivalent bonds which allows for scalable spherical capsids.
 
+\subsubsection{Recent Work}
+This section will really quickly talk about some of the research that is being done on capsids currently. Twarock \cite{Twarock:2004} \cite{Twarock:2006} is using group theory to help explain the irregular capsids. They are spherical but do not strictly adhere to icosahedral symmetry, they have shifts, or translations in them. Mannige \cite{Mannige:2009} explained the stress placed on bonds due to being skewed shells, thus explaining why they are less common. Zlotnick \cite{Zlotnick:2005} and Zandi \cite{Zandi:2004} are examples of those working to understand not only the structure of the capsids, but also how the form, how they come together, thus allowing us to understand how they might be destroyed.
 
+I do not want this section to be long, just a brief sentence or two on each person to highlight the types of work still occurring.
 
-\section{T-numbers}
+\section{Mathematical Problems and Solutions}
+\subsection{The Problems}
+\subsubsection{Triangulation Numbers}
 \paragraph{}
-Caspar and Klug claim that their T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units found in a spherical capsid through the formula $P = 60T$. Recall this 60 is because the T number measure the number of triangular capsomers??? per side of the icosahedron and each capsomer is composed of 3 of the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better microscopes (get type and shit), as mathematicians we should ask, was this expected? Will the T-number always work for integers h and k. If we use Caspar and Klug's approach of placing one corner of a triangular face of the icosahedron at $(0,0)$ on a P6 (what does this mean) grid, will the third corner always fall on another integer valued point of the grid? To answer these questions we will take 2 different approaches. One requires no mathematics beyond high-school, and the second only requires a bit of knowledge of linear algebra.
+The first problem comes from Caspar and Klug's definition and claims about their T-number. Caspar and Klug claim that their T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units found in a spherical capsid through the formula $P = 60T$. Recall this 60 is because the T number measure the number of triangular facets per side of the icosahedron and each facet is composed of 3 promotes, the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better microscopes (get type and shit), the mathematical question remains, was this expected? Will the T-number always work for integers h and k. If we use Caspar and Klug's approach of placing one corner of a triangular face of the icosahedron at $(0,0)$ on a P6 (what does this mean) grid, will the third corner always fall on another integer valued point of the grid? To answer these questions we will take 2 different approaches. One requires no mathematics beyond high-school, and the second only requires a bit of knowledge of linear algebra.
 
-\subsection{The geometry approach}
-
+\subsubsection{Protein Shape}
 \paragraph{}
-The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. We will attempt to do this with no more than the skills of someone who has passed high school geometry. \\
+The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids [ref figures I have used with trapezoidal subunits] with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids. But again, this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will again require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
 
-First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If we did not know this formula off the top of our head, could we re-establish it? To begin, take an equilateral triangle with side length $b$ (figure). Draw a line from any corner to the midpoint of the opposing side. We now have 2 triangles. If we recall our triangle congruency theorems we can quickly see by the side-angle-side theorem that these triangles are congruent. This forces the angle we cut with our line to be bisected, and since we started with an equilateral triangle which has all angles equal to $60\degree$, we know the top angles are both $30\degree$ making our constructed line perpendicular to the base. \\
+\subsection{Solutions}
+
+\subsubsection{T-Numbers}
+\paragraph{Solution 1:}
+The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. We will attempt to do this with no more than the skills of someone who has passed high school geometry.
+
+First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If we did not know this formula off the top of our head, could we re-establish it? To begin, take an equilateral triangle with side length $b$ (figure). Draw a line from any corner to the midpoint of the opposing side. We now have 2 triangles. If we recall our triangle congruency theorems we can quickly see by the side-angle-side theorem that these triangles are congruent. This forces the angle we cut with our line to be bisected, and since we started with an equilateral triangle which has all angles equal to $60\degree$, we know the top angles are both $30\degree$ making our constructed line perpendicular to the base.
 
 We now wish to find the length of our constructed line $l$. Thankfully the pythagorean theorem is all we need for this.
 \begin{align*}
@@ -165,10 +175,13 @@ A &= \dfrac{\sqrt{3}} {4} \, b^2
 
 Recall our goal of establishing that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. Consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. We know 2 of the side lengths and wish to find side length b. Applying our previous work, we know that the exterior angle at point $(h,0)$ is $60\degree$, so if we drop a line down from point $(h,k)$ perpendicular to our t-axis, we obtain a triangle we have already worked with and know the dimensions of. Since it is $k$ units from $(h,0)$ to $(h,k)$ we know the perpendicular we just drew has length $\rfrac{\sqrt{3}} {2} \, b$ and the final leg of the triangle is $\rfrac 1 2 \, b$.
 
-\section{What do trapezoids have to do with it?}
-This entire section is wrong. You fucked up cause you're fucking retarded.
+\paragraph{Solution 2:}
 
-\paragraph{}
+Hey put cool math in here
+
+\subsubsection{Protein Shape}
+
+\paragraph{This stuff does not need to be kept, i'm just not sure if I want some of it yet so I don't want to delete it}
 One constant and often unexplained attribute within works discussing icosahedral virus capsids is the authors' choice of subunit shape. Almost always the subunit is represented by a trapezoid with little to no explanation of why. If we recap what we know so far:
 \begin{enumerate}
 	\item Capsids are made up of pentamers and hexamers
@@ -181,8 +194,18 @@ But then we must ask why not some other shape that also has this property. For i
 
 Upon examination of shaded and deciphered images of real world icosahedral capsids we can see that the choice of trapezoid is simply due to their real world occurrence. (See [INSERT] capsid images) This was mentioned as early as (get date) by (get guy from mannige thesis)But this is a very interesting phenomenon. As pointed out by 
 
+\paragraph{Solution 1:}
 
+More cool math using Euler's Polyhedral Formula (taught in early geometry classes). \cite{Mannige:2008}
 
+\paragraph{Solution 2:}
+This one is kind of a group theory approach, but really just comes down to saying "Hey that shape is reflexively symmetric!" \cite{Manning:2008}
+
+\section{Conclusion}
+\paragraph{}
+See it really wasn't that bad.
+
+\newpage
 \bibliographystyle{IEEEtran}
 \bibliography{Capsid_Cites}
 
