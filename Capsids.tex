@@ -155,11 +155,11 @@ The second problem is not one that comes directly from the theory of quasi-equiv
 
 \subsubsection{T-Numbers}
 \paragraph{Solution 1:}
-The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. We will attempt to do this with no more than the skills of someone who has passed high school geometry.
+The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. This solution will be attempted with no more than the skills of someone who has passed high school geometry.
 
-First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If we did not know this formula off the top of our head, could we re-establish it? To begin, take an equilateral triangle with side length $b$ (figure). Draw a line from any corner to the midpoint of the opposing side. We now have 2 triangles. If we recall our triangle congruency theorems we can quickly see by the side-angle-side theorem that these triangles are congruent. This forces the angle we cut with our line to be bisected, and since we started with an equilateral triangle which has all angles equal to $60\degree$, we know the top angles are both $30\degree$ making our constructed line perpendicular to the base.
+First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If this formula is unknown it is a simple and beneficial exercise to re-establish it. To begin, take an equilateral triangle with side length $b$ (figure). Draw a line from any corner to the midpoint of the opposing side. Now there are 2 triangles. Recalling the triangle congruency, by the side-angle-side theorem these triangles are congruent. This forces the angle that was cut with the drawn line to be bisected. Since the starting triangle was an equilateral triangle which has all angles equal to $60\degree$, the top angles are both $30\degree$ making the constructed line perpendicular to the base.
 
-We now wish to find the length of our constructed line $l$. Thankfully the pythagorean theorem is all we need for this.
+Now to find the length of the constructed line $l$. Thankfully the pythagorean theorem is all that is required for this.
 \begin{align*}
 b^2 &= \left(\dfrac{b} {2}\right)^2 + l^2 \\
 l^2 &= b^2 - \dfrac{b^2} {4} \\
@@ -171,9 +171,29 @@ Thus using our standard triangle area formula of $A = \rfrac{1} {2} \, base * he
 \begin{align*}
 A &= \dfrac{1} {2} \, b * \dfrac{\sqrt{3}} {2} \, b \\
 A &= \dfrac{\sqrt{3}} {4} \, b^2
-\end{align*} \\
+\end{align*} 
 
-Recall our goal of establishing that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. Consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. We know 2 of the side lengths and wish to find side length b. Applying our previous work, we know that the exterior angle at point $(h,0)$ is $60\degree$, so if we drop a line down from point $(h,k)$ perpendicular to our t-axis, we obtain a triangle we have already worked with and know the dimensions of. Since it is $k$ units from $(h,0)$ to $(h,k)$ we know the perpendicular we just drew has length $\rfrac{\sqrt{3}} {2} \, b$ and the final leg of the triangle is $\rfrac 1 2 \, b$.
+Recall the goal is establishing that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. So from the above formula with $b = 1$, the resulting area should be $\mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$. 
+
+Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. Two of the side lengths are known and side length b remains to be found. From the setup of the grid, the exterior angle at point $(h,0)$ is $60\degree$, so if a line is dropped down from point $(h,k)$ perpendicular to the t-axis the result is a triangle that was just worked with and with known dimensions. Since it is $k$ units from $(h,0)$ to $(h,k)$, the perpendicular just drawn has length $\rfrac{\sqrt{3}} {2} \, k$ and the final leg of the triangle is $\rfrac 1 2 \, k$.
+
+Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem.
+\begin{align*}
+L^2 &= \left(\dfrac{\sqrt{3}} {2} \, k\right)^2 + \left(h+\dfrac 1 2 \, k\right)^2 \\
+&= \dfrac 3 4 \, k^2 + h^2 + hk + \dfrac 1 4 k^2 \\
+& = h^2 + hk + k^2 \\
+L & = \sqrt{h^2 + hk + k^2}
+\end{align*}
+
+Now plugging this into the Area formula for b, the result is $A = \mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$, which is exactly the desired area from before. So this definitively shows that the area of an equilateral triangle with base from point $(h,0)$ to $(h,k)$ is equal to the area of $T = h^2 + hk + k^2$ equilateral triangles with base length 1. Now recall:
+
+\begin{enumerate}
+	\item The triangle with base from point $(h,0)$ to $(h,k)$ represents one side of an icosahedron
+	\item Icosahedrons have 20 sides
+	\item The base 1 triangle represents one of the triangular facets of the capsid which is made up of 3 proteins
+\end{enumerate}
+
+Put it all together and the result is that a total of $3*20*(h^2 + hk + k^2) = 60 T$ proteins will fit on the capsid described.
 
 \paragraph{Solution 2:}
 
