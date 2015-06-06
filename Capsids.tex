@@ -245,7 +245,7 @@ Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \
 	\end{minipage}
 \end{figure}
 
-Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem.
+Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem (Figure~\ref{equil_baselength}).
 \begin{align*}
 L^2 &= \left(\dfrac{\sqrt{3}} {2} \, k\right)^2 + \left(h+\dfrac 1 2 \, k\right)^2 \\
 &= \dfrac 3 4 \, k^2 + h^2 + hk + \dfrac 1 4 k^2 \\
@@ -269,6 +269,36 @@ Now plugging this into the Area formula for b, the result is $A = \mathbf{ \dfra
 \end{enumerate}
 
 Put it all together and the result is that a total of $3*20*(h^2 + hk + k^2) = 60 T$ proteins will fit on the capsid described.
+
+%% Second geometry problem
+While the previous work answered the first question, it is still unknown where point $P$ is located, or if it is even an integer valued point (recall Figure~\ref{fig:equil_baselength}). A quick examination of the angles at the origin provide a good starting place from which to answer this question. The angle created by lines $\overline{P(0,0)}$ and $\overline{(0,0)(h,k)}$ is $60\degree$ since the triangle is an equilateral. Similarly, the angle created by the axes is $60\degree$ by definition. Now both of these angles share a common section from the k-axis to line $\overline{(0,0)(h,k)}$, call this angle $\alpha$. This means that the remaining portion of each angle must be the same, call it $\beta$, where $\alpha + \beta = 60\degree$ (Figure~\ref{fig:equil_angles}). Since all the sides of triangle $P(0,0)(h,k)$ are the same, one path would be to try and recreate the lower, shaded triangle above the k-axis.
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\caption{}
+		\includegraphics[width = \textwidth]{ddagger4.pdf}
+		\label{fig:equil_angles}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\caption{}
+		\includegraphics[width = \textwidth]{ddagger5.pdf}
+		\label{fig:equil_congruent}
+	\end{minipage}
+\end{figure}
+
+	To recreate the lower, shaded triangle, create a line from point $(0,h)$ to point P. Notice even without preset marks on the axis, this could be done simply by copying the distance $h$ using a compass and marking that distance from the origin on the k-axis. Now the resulting triangle has sides with length $\sqrt{h^2 + hk + k^2}$ and length h which come together at an angle of $\beta$. This matches the dimensions of the shaded triangle. Thus by the side-angle-side triangle congruency theorem the two smaller triangles are congruent (Figure~\ref{fig:equil_congruent}). This forces the unknown side length to be k, and the angle on the k axis to be $120\degree$, marked $\gamma$ in the figure for space.
+	
+	Notice that since $\gamma=120\degree$, the exterior angle of the constructed triangle at point $(0,h)$ is $60\degree$. This makes it possible to construct an equilateral triangle using the k-axis and the line $\overline{P(0,h)}$. Connect point $(0,h+k)$ to point $P$. Since two sides have length k and they come together at a $60\degree$ angle, the constructed triangle must be equilateral with side length k (Figure~\ref{fig:equil_mini}). Now everything needed to fully define point $P$ is available. Begin at the origin $(0,0)$ and go up the k-axis $h+k$ units, then go left $k$ units, parallel to the h-axis. This means that $P=(-k,h+k)$. Look at that amazing result! The third point of the original triangle (from Figure~\ref{fig:set}) falls at an integer valued point uniquely determined by the values $h$ and $k$. What is more, this result was again found using nothing more than basic geometry construction skills.
+	
+\begin{figure}[h]
+	\centering
+	\caption{}
+	\includegraphics[width=.45\textwidth]{ddagger_end.pdf}
+	\label{fig:e	uil_mini}
+\end{figure}
 
 \paragraph{Solution 2:}
 
