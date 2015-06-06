@@ -15,7 +15,8 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{caption}
-\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{epstopdf}
 \newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
 
 \newtheorem{definition}{Definition}
@@ -152,25 +153,64 @@ This section will really quickly talk about some of the research that is being d
 
 I do not want this section to be long, just a brief sentence or two on each person to highlight the types of work still occurring.
 
-\section{Mathematical Problems and Solutions}
-\subsection{The Problems}
-\subsubsection{Triangulation Numbers}
+\section{Mathematical Problems and Solutions} %%%%% MATH SECTION%%%%%
+Recall that the one of the goals of this paper is to explore the fun mathematical problems that can be inspired by biology. Thus, in the following sections mathematical problems from two different areas of icosahedral capsid theory will be explored. Multiple solution techniques will be given for the problems with varying degrees of mathematical difficulty.
+
+\subsection{Triangulation Numbers} %%%%% T - NUM Problems%%%%%
 \paragraph{}
-The first problem comes from Caspar and Klug's definition and claims about their T-number. Caspar and Klug claim that their T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units found in a spherical capsid through the formula $P = 60T$. Recall this 60 is because the T number measure the number of triangular facets per side of the icosahedron and each facet is composed of 3 promotes, the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better microscopes (get type and shit), the mathematical question remains, was this expected? Will the T-number always work for integers h and k. If we use Caspar and Klug's approach of placing one corner of a triangular face of the icosahedron at $(0,0)$ on a P6 (what does this mean) grid, will the third corner always fall on another integer valued point of the grid? To answer these questions we will take 2 different approaches. One requires no mathematics beyond high-school, and the second only requires a bit of knowledge of linear algebra.
+There are two problems which arise from Caspar and Klug's definition and claims about their T-number. First, Caspar and Klug claim that their T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units found in a spherical capsid through the formula $P = 60T$. Recall this 60 is because the T number measure the number of triangular facets per side of the icosahedron and each facet is composed of 3 protomeres, the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better electron microscopes, the mathematical question remains, was this expected? Will the T-number always work for integers h and k. The first problem will be to establish that using points $(0,0)$ and $(h,k)$ as the base of an equilateral triangle will result in a triangle will an area equal to T times the area of an equilateral triangle with unit length, that is base equal to one. The second question that must be asked is, if two corners are placed at $(0,0)$ and $(h,k)$ will the third corner, call it point P, always fall on an integer valued point? (See Figure~\ref{fig:setup})To answer these questions we will take 2 different approaches. One requires no mathematics beyond high-school, and the second only requires a bit of knowledge of linear algebra.
 
-\subsubsection{Protein Shape}
-\paragraph{}
-The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids [ref figures I have used with trapezoidal subunits] with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids. But again, this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will again require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
+\begin{figure}[h]
+	\caption{Equilateral Triangle on h, k-axes}
+	\centering
+	\begin{subfigure}[h]{.75\textwidth}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{ddagger0_tri_setup.pdf}
+	\end{center}
+		One face of a $T=h^2 + hk + k^2$ icosahedral capsid is represented on the h, k coordinate system. Recall when 		working with T numbers that the h-axis is in the standard horizontal orientation, and the k-axis is at $60 \degree$ to t		he h-	axis in a counter clockwise rotation.
+	\end{subfigure}
+	\label{fig:setup}
+\end{figure}
 
-\subsection{Solutions}
-
-\subsubsection{T-Numbers}
-\paragraph{Solution 1:}
+\subsubsection{Solution 1: Geometry}
 The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. This solution will be attempted with no more than the skills of someone who has passed high school geometry.
 
-First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If this formula is unknown it is a simple and beneficial exercise to re-establish it. To begin, take an equilateral triangle with side length $b$ (figure). Draw a line from any corner to the midpoint of the opposing side. Now there are 2 triangles. Recalling the triangle congruency, by the side-angle-side theorem these triangles are congruent. This forces the angle that was cut with the drawn line to be bisected. Since the starting triangle was an equilateral triangle which has all angles equal to $60\degree$, the top angles are both $30\degree$ making the constructed line perpendicular to the base.
+First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If this formula is unknown to the reader, it is a simple and beneficial exercise to re-establish it. To begin, take an equilateral triangle with side length $b$ (Figure~\ref{fig:equil_tri_a}). Draw a line from any corner to the midpoint of the opposing side (Figure~\ref{fig:equil_tri_b}). Now there are 2 triangles. Recalling the triangle congruency, by the side-angle-side theorem these triangles are congruent (Figure~\ref{fig:equil_tri_c}). This forces the angle that was cut with the drawn line to be bisected. Since the starting triangle was an equilateral triangle which has all angles equal to $60\degree$, the top angles are both $30\degree$ making the constructed line perpendicular to the base (Figure~\ref{fig:equil_tri_d}).
 
-Now to find the length of the constructed line $l$. Thankfully the pythagorean theorem is all that is required for this.
+\begin{figure}[h]
+	\caption{Area of Equilateral Triangle Constructions}
+	\centering
+	\begin{subfigure}[h]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{equil_tri_a.pdf}
+		\caption{}
+		\label{fig:equil_tri_a}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{equil_tri_b.pdf}
+		\caption{}
+		\label{fig:equil_tri_b}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{equil_tri_c.pdf}
+		\caption{}
+		\label{fig:equil_tri_c}
+	\end{subfigure} \\
+	\begin{subfigure}[h]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{equil_tri_d.pdf}
+		\caption{}
+		\label{fig:equil_tri_d}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{equil_tri_e.pdf}
+		\caption{}
+		\label{fig:equil_tri_e}
+	\end{subfigure}	
+\end{figure}
+
+Now to find the length of the constructed line $l$ (Figure~\ref{fig:equil_tri_e}). Thankfully the pythagorean theorem is all that is required for this.
 \begin{align*}
 b^2 &= \left(\dfrac{b} {2}\right)^2 + l^2 \\
 l^2 &= b^2 - \dfrac{b^2} {4} \\
@@ -178,15 +218,32 @@ l^2 &= \dfrac{3} {4} \, b^2 \\
 l &= \sqrt{\dfrac{3} {4} \, b^2} \\
 l &= \dfrac{\sqrt{3}} {2} \, b
 \end{align*}
-Thus using our standard triangle area formula of $A = \rfrac{1} {2} \, base * height$ we get
+%
+Thus, using our standard triangle area formula of $A = \rfrac{1} {2} \, base * height$ we get
 \begin{align*}
 A &= \dfrac{1} {2} \, b * \dfrac{\sqrt{3}} {2} \, b \\
 A &= \dfrac{\sqrt{3}} {4} \, b^2
 \end{align*} 
 
-Recall the goal is establishing that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. So from the above formula with $b = 1$, the resulting area should be $\mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$. 
+Recall the goal is to establish that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ (Figure~\ref{fig:setup}) will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. So from the above formula with $b = 1$, the resulting area should be $\mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$. 
 
-Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. Two of the side lengths are known and side length b remains to be found. From the setup of the grid, the exterior angle at point $(h,0)$ is $60\degree$, so if a line is dropped down from point $(h,k)$ perpendicular to the t-axis the result is a triangle that was just worked with and with known dimensions. Since it is $k$ units from $(h,0)$ to $(h,k)$, the perpendicular just drawn has length $\rfrac{\sqrt{3}} {2} \, k$ and the final leg of the triangle is $\rfrac 1 2 \, k$.
+Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. Two of the side lengths are known and side length b remains to be found (Figure~\ref{fig:base_setup}). From the setup of the grid, the exterior angle at point $(h,0)$ is $60\degree$, so if a line is dropped down from point $(h,k)$ perpendicular to the t-axis the result is a triangle that was just worked with and with known dimensions. Since it is $k$ units from $(h,0)$ to $(h,k)$, the perpendicular just drawn has length $\rfrac{\sqrt{3}} {2} \, k$ and the final leg of the triangle is $\rfrac 1 2 \, k$ (Figure~\ref{fig:base_right}).
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\caption{}
+		\includegraphics[width=\textwidth]{ddagger1.pdf}
+		\label{fig:base_setup}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\caption{}
+		\includegraphics[width=\textwidth]{ddagger2.pdf}
+		\label{fig:base_right}
+	\end{minipage}
+\end{figure}
 
 Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem.
 \begin{align*}
@@ -196,7 +253,14 @@ L^2 &= \left(\dfrac{\sqrt{3}} {2} \, k\right)^2 + \left(h+\dfrac 1 2 \, k\right)
 L & = \sqrt{h^2 + hk + k^2}
 \end{align*}
 
-Now plugging this into the Area formula for b, the result is $A = \mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$, which is exactly the desired area from before. So this definitively shows that the area of an equilateral triangle with base from point $(h,0)$ to $(h,k)$ is equal to the area of $T = h^2 + hk + k^2$ equilateral triangles with base length 1. Now recall:
+\begin{figure}[h]
+	\centering
+	\caption{}
+	\includegraphics[width=.45\textwidth]{ddagger3.pdf}
+	\label{fig:equil_baselength}
+\end{figure}
+
+Now plugging this into the Area formula for b, the result is $A = \mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$, which is exactly the desired area from before! So this definitively shows that the area of an equilateral triangle with base from point $(h,0)$ to $(h,k)$ is equal to the area of $T = h^2 + hk + k^2$ equilateral triangles with base length 1. Now recall:
 
 \begin{enumerate}
 	\item The triangle with base from point $(h,0)$ to $(h,k)$ represents one side of an icosahedron
@@ -209,6 +273,11 @@ Put it all together and the result is that a total of $3*20*(h^2 + hk + k^2) = 6
 \paragraph{Solution 2:}
 
 Hey put cool math in here
+
+
+\subsubsection{Protein Shape}
+\paragraph{}
+The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids [ref figures I have used with trapezoidal subunits] with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids. But again, this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will again require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
 
 \subsubsection{Protein Shape}
 
