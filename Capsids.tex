@@ -231,21 +231,20 @@ Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \
 
 \begin{figure}[h]
 	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\caption{}
+	\caption{Calculating the Base}
+	\begin{subfigure}[h]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ddagger1.pdf}
-		\label{fig:base_setup}
-	\end{minipage}
-	\begin{minipage}{0.45\textwidth}
-		\centering
 		\caption{}
+		\label{fig:base_setup}
+	\end{subfigure}
+	\begin{subfigure}[h]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{ddagger2.pdf}
+		\caption{}
 		\label{fig:base_right}
-	\end{minipage}
+	\end{subfigure}
 \end{figure}
 
-Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem (Figure~\ref{equil_baselength}).
+Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem (Figure~\ref{fig:equil_baselength}).
 \begin{align*}
 L^2 &= \left(\dfrac{\sqrt{3}} {2} \, k\right)^2 + \left(h+\dfrac 1 2 \, k\right)^2 \\
 &= \dfrac 3 4 \, k^2 + h^2 + hk + \dfrac 1 4 k^2 \\
@@ -255,7 +254,7 @@ L & = \sqrt{h^2 + hk + k^2}
 
 \begin{figure}[h]
 	\centering
-	\caption{}
+	\caption{Base Found}
 	\includegraphics[width=.45\textwidth]{ddagger3.pdf}
 	\label{fig:equil_baselength}
 \end{figure}
@@ -275,31 +274,30 @@ While the previous work answered the first question, it is still unknown where p
 
 \begin{figure}[h]
 	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\caption{}
+	\caption{Locating Point P}
+	\begin{subfigure}[h]{0.45\textwidth}
 		\includegraphics[width = \textwidth]{ddagger4.pdf}
-		\label{fig:equil_angles}
-	\end{minipage}
-	\begin{minipage}{0.45\textwidth}
-		\centering
 		\caption{}
+		\label{fig:equil_angles}
+	\end{subfigure}
+	\begin{subfigure}[h]{0.45\textwidth}
 		\includegraphics[width = \textwidth]{ddagger5.pdf}
+		\caption{}
 		\label{fig:equil_congruent}
-	\end{minipage}
+	\end{subfigure}
 \end{figure}
 
 To recreate the lower, shaded triangle, create a line from point $(0,h)$ to point P. Notice even without preset marks on the axis, this could be done simply by copying the distance $h$ using a compass and marking that distance from the origin on the k-axis. Now the resulting triangle has sides with length $\sqrt{h^2 + hk + k^2}$ and length h which come together at an angle of $\beta$. This matches the dimensions of the shaded triangle. Thus by the side-angle-side triangle congruency theorem the two smaller triangles are congruent (Figure~\ref{fig:equil_congruent}). This forces the unknown side length to be k, and the angle on the k axis to be $120\degree$, marked $\gamma$ in the figure for space.
 	
-Notice that since $\gamma=120\degree$, the exterior angle of the constructed triangle at point $(0,h)$ is $60\degree$. This makes it possible to construct an equilateral triangle using the k-axis and the line $\overline{P(0,h)}$. Connect point $(0,h+k)$ to point $P$. Since two sides have length k and they come together at a $60\degree$ angle, the constructed triangle must be equilateral with side length k (Figure~\ref{fig:equil_mini}). Now everything needed to fully define point $P$ is available. Begin at the origin $(0,0)$ and go up the k-axis $h+k$ units, then go left $k$ units, parallel to the h-axis. This means that $P=(-k,h+k)$. Look at that amazing result! The third point of the original triangle (from Figure~\ref{fig:set}) falls at an integer valued point uniquely determined by the values $h$ and $k$. 
+Notice that since $\gamma=120\degree$, the exterior angle of the constructed triangle at point $(0,h)$ is $60\degree$. This makes it possible to construct an equilateral triangle using the k-axis and the line $\overline{P(0,h)}$. Connect point $(0,h+k)$ to point $P$. Since two sides have length k and they come together at a $60\degree$ angle, the constructed triangle must be equilateral with side length k (Figure~\ref{fig:equil_mini}). Now everything needed to fully define point $P$ is available. Begin at the origin $(0,0)$ and go up the k-axis $h+k$ units, then go left $k$ units, parallel to the h-axis. This means that $P=(-k,h+k)$. Look at that amazing result! The third point of the original triangle (from Figure~\ref{fig:setup}) falls at an integer valued point uniquely determined by the values $h$ and $k$. 
 	
 Both questions raised about the T number have now been answered. It has been fully established that the equilateral triangle with points at $(0,0)$ and $(h,k)$ will have its third point at $(-k, h+k)$ and have the same area as T equilateral triangles with unit sides. What is more, this result was again found using nothing more than basic geometry construction skills.
 	
 \begin{figure}[h]
 	\centering
-	\caption{}
+	\caption{Location of Point P}
 	\includegraphics[width=.45\textwidth]{ddagger_end.pdf}
-	\label{fig:e	uil_mini}
+	\label{fig:equil_mini}
 \end{figure}
 
 \subsubsection{Solution 2: Linear Algebra} %%%%% Linear Algebra%%%%%
@@ -327,7 +325,7 @@ Because both problems occur in a space defined by the $h$ and $k$ axes which exi
 	\end{subfigure}
 	\label{fig:basis_vectors}
 \end{figure}
-
+%
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\caption{Converting $b_2$ to $\mathcal{E}$}
@@ -335,14 +333,14 @@ Because both problems occur in a space defined by the $h$ and $k$ axes which exi
 	\vspace{-5pt}
 	\label{fig:basis_convert}
 \end{wrapfigure}
-
+%
 Let $T$ represent the transformation from basis $\mathcal{B}$ to $\mathcal{E}$. For simplicity let $T(b_1) = e_1$ so $T(1,0) = (1,0)$. Now using the results previously obtained about equilateral triangles and the fact that we want the basis vectors to be of unit length, it is easy to see that $T(b_2) = \rfrac{1}{2} e_1 + \rfrac {\sqrt{3}}{2} e_2$, or $T(0,1) = (\rfrac{1}{2} , \rfrac{\sqrt{3}}{2})$ (Figure~\ref{fig:basis_convert}). Recall that the transformation matrix, $T$, from basis $\mathcal{B}$ to $\mathcal{E}$ is represented by using the two vectors found above as columns in a matrix. So as a matrix:
 %
 \begin{align*}
 	T = \bigg[ \big[b_1\big]_\mathcal{E} , \big[b_2\big]_\mathcal{E}  \bigg]
 	= \begin{bmatrix}
-		1 & \rfrac{\sqrt{3}}{2} \\
-		0 & \rfrac{1}{2}
+		1 &  \rfrac{1}{2}\\
+		0 & \rfrac{\sqrt{3}}{2}
 	\end{bmatrix}	
 \end{align*}
 %
@@ -368,7 +366,172 @@ Similarly, to go from $\mathcal{E}$ to $\mathcal{B}$ simply use $T^{-1}$. To do 
 		0 & 1
 	\end{bmatrix}
 \end{align*}
-	
+%
+Now it is possible to freely transition between the bases $\mathcal{B}$ and $\mathcal{E}$. Since $\mathcal{E}$ is the standard basis for $\mathbb{R}^2$, the standard distance formula defined by the Euclidean norm applies. That is, for any vector $(x,y)$ the length of the vector is given by:
+%
+\begin{align*}
+	\| (x,y) \|_\mathcal{E} = \sqrt{x^2 + y^2}
+\end{align*}
+%
+Recall from Figure~\ref{fig:setup} that the first goal was to establish the length of vector $(h,k)$ in $\mathcal{B}$. To do so, simply change bases from $\mathcal{B}$ to $\mathcal{E}$ and then find the distance using the standard formula above, thus $\| (h, k) \|_\mathcal{B} = \| T(h,k) \|_\mathcal{E}$.
+%
+\begin{align*}
+	T(h,k) =
+	\begin{bmatrix}
+		1 & \rfrac{1}{2}\\
+		0 & \rfrac{\sqrt{3}}{2} 
+	\end{bmatrix}
+	\begin{bmatrix}
+		h \\
+		k
+	\end{bmatrix}
+	= \begin{bmatrix}
+		h + \rfrac{1}{2} k \\
+		\rfrac{\sqrt{3}}{2} k
+	\end{bmatrix}
+	= \left(h + \dfrac{1}{2} k , \dfrac{\sqrt{3}}{2} k \right)
+\end{align*}
+Thus
+\begin{align*}
+	\| (h, k) \|_\mathcal{B} &= \left\| \left(h + \dfrac{1}{2} k , \dfrac{\sqrt{3}}{2} k \right) \right\|_\mathcal{E} \\
+	&= \sqrt{\left(h + \dfrac{1}{2} k \right)^2 + \left(\dfrac{\sqrt{3}}{2} k \right)^2} \\
+	&= \sqrt{h^2 + hk + \dfrac 1 4 k^2 + \dfrac 3 4 k^2} \\
+	&= \sqrt{h^2 + hk + k^2}
+\end{align*}
+%
+Notice that this is the exact same result obtained from the geometric solution! From here it would be a simple matter to again apply the area formula for an equilateral triangle, and arrive at the conclusion that the triangle originally shown in Figure~\ref{fig:setup} has $Area = \rfrac{\sqrt{3}}{4}\sqrt{h^2 + hk + k^2}^2 = \rfrac{\sqrt{3}}{4}h^2 + hk + k^2$. This confirms once again that $T=h^2 +hk +k^2$ equilateral triangles with unit sides fit in a an equilateral triangle with one side from $(0,0)$ to $(h,k)$.
+
+Approaching the second problem, the location of point $P$, is once again rather straightforward in linear algebra, although a beneficial side track will be taken during the work. To find the location of point $P$ simply rotate vector $(h,k)$ $60\degree$ counter-clockwise about the origin. Doing so will require the use of the standard rotation matrix in $\mathbb{R}^2$, so the first, and only, side trip in this problem will be to establish the rotation matrix.
+
+The idea is similar to finding the matrix which allows passage between the bases $\mathcal{B}$ and $\mathcal{E}$. First, rotate each of the standard basis vectors, $e_1$ and $e_2$, by $\theta\degree$. Then represent the result as columns in a matrix. This resulting matrix is the rotation matrix for $\mathbb{R}^2$, call it $R_\theta$. 
+
+\begin{figure}[h]
+	\caption{Rotation of Basis Vectors $e_1$ and $e_2$}
+	\centering
+	\begin{subfigure}[h]{0.45\textwidth}
+		\includegraphics[width = \textwidth]{rotation_e1.pdf}
+		\caption{Rotation of $e_1$ by $\theta$}
+		\label{fig:rotate_e1}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{0.45\textwidth}
+		\includegraphics[width = \textwidth]{rotation_e2.pdf}
+		\caption{Rotation of $e_2$ by $\theta$}
+		\label{fig:rotate_e2}
+	\end{subfigure}
+	\label{fig:rotations}
+\end{figure}
+
+Since both basis vectors are of unit length, any rotation about the origin will leave them on the unit circle (Figure~\ref{fig:rotations}). This means that when $e_1$ is rotated by $\theta$, the result is the point on the unit sphere given by $\theta$, which is $(\cos{\theta} , \sin{\theta})$ (Figure~\ref{fig:rotate_e1}). Thus $R_\theta(e_1) = (\cos{\theta} , \sin{\theta})$. Now notice that if $e_2$ is rotated by $\theta$ the resulting point is equivalent to the point on the unit circle defined by $\theta + 90\degree$. Thus $R_\theta(e_2) = (\cos{(\theta + 90)} , \sin{(\theta + 90)})$. At this point $R_\theta$ could be represented by the matrix:
+%
+\begin{align*}
+	\begin{bmatrix}
+		\cos{\theta} & \cos{(\theta + 90)} \\
+		\sin{\theta} & \sin{(\theta + 90)}
+	\end{bmatrix}
+\end{align*}
+%
+But this matrix is a bit more cumbersome than desired and can be cleaned up using some simple trigonometric identities. While they shall not be proven here, the identities $\cos{(\theta + 90)} = -\sin{\theta}$ and $\sin{(\theta + 90)} = \cos{\theta}$ are rather standard and all that are needed to clean up the above matrix. Thus the rotation matrix for $\mathbb{R}^2$ is:
+\begin{align*}
+	R_\theta =
+	\begin{bmatrix}
+		\cos{\theta} & -\sin{\theta} \\
+		\sin{\theta} & \cos{\theta}
+	\end{bmatrix}
+\end{align*}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\vspace{-15pt}
+	\caption{Rotation via Linea Transformation}
+	\includegraphics[width=.3\textwidth]{linear_trans.pdf}
+	\vspace{-15pt}
+	\label{fig:linear_transform}
+\end{wrapfigure}
+%
+Now since this matrix was determined using $e_1$ and $e_2$ it will only work in $\mathcal{E}$. Luckily, (GET THEOREM FROM FRALEIGH) rotation in $\mathcal{B}$, represented by $\widetilde{R_\theta}$ is equivalent to performing a change of basis from $\mathcal{B}$ to $\mathcal{E}$, using the rotation matrix $R_\theta$, and then changing bases back to $\mathcal{B}$ (Figure~\ref{fig:linear_transform}). Now recall that the goal was to rotate by $60\degree$
+
+\begin{align*}
+	\widetilde{R_{60}} &= T^{-1} R_{60} T \\
+	&= \dfrac{2}{\sqrt{3}}
+	\begin{bmatrix}
+		\rfrac{\sqrt{3}}{2} & -\rfrac{1}{2} \\
+		0 & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		\cos{60} & -\sin{60} \\
+		\sin{60} & \cos{60}
+	\end{bmatrix}	
+	\begin{bmatrix}
+		1 &  \rfrac{1}{2}\\
+		0 & \rfrac{\sqrt{3}}{2}
+	\end{bmatrix} \\
+	&= \dfrac{2}{\sqrt{3}}
+	\begin{bmatrix}
+		\rfrac{\sqrt{3}}{2} & -\rfrac{1}{2} \\
+		0 & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		\rfrac{1}{2} & -\rfrac{\sqrt{3}}{2} \\
+		\rfrac{\sqrt{3}}{2} & \rfrac{1}{2} 
+	\end{bmatrix}
+	\begin{bmatrix}
+		1 &  \rfrac{1}{2}\\
+		0 & \rfrac{\sqrt{3}}{2}
+	\end{bmatrix} \\
+	&= \dfrac{1}{4\sqrt{3}}
+	\begin{bmatrix}
+		\sqrt{3} & 1\\
+		0 & 2
+	\end{bmatrix}
+	\begin{bmatrix}
+		1 & \sqrt{3} \\
+		\sqrt{3} & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		2 & 1 \\
+		0 & \sqrt{3}
+	\end{bmatrix} \\
+	&= \dfrac{1}{4\sqrt{3}}
+	\begin{bmatrix}
+		\sqrt{3} & 1\\
+		0 & 2
+	\end{bmatrix}
+	\begin{bmatrix}
+		2 & -2 \\
+		2\sqrt{3} & 2\sqrt{3}
+	\end{bmatrix} \\
+	&= \dfrac{1}{4\sqrt{3}}
+	\begin{bmatrix}
+		0 & -4\sqrt{3} \\
+		4\sqrt{3} & 4\sqrt{3}
+	\end{bmatrix} \\
+	&=
+	\begin{bmatrix}
+		0 & -1 \\
+		1 & 1
+	\end{bmatrix}
+\end{align*}
+%
+Recall the goal was to rotate the vector $(h,k)$ in $\mathcal{B}$ by $60\degree$. 
+%
+\begin{align*}
+	\widetilde{R_{60}}(h,k) =
+	\begin{bmatrix}
+		0 & -1 \\
+		1 & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		h \\ k
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		-k \\ h + k
+	\end{bmatrix} =
+	(-k , h + k)
+\end{align*}
+So as before, since $\widetilde{R_{60}}(h,k) = (-k , h + k)$, the point $P$ of the initial triangle in Figure~\ref{fig:setup} is an integer valued point uniquely defined by $h$ and $k$, given by $P = (-k , h + k)$.
+
+ONE LAST SENTENCE, ABOUT HEY THIS WAS COOL.
 \subsection{Protein Shape}
 \paragraph{}
 The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids [ref figures I have used with trapezoidal subunits] with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids. But again, this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will again require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
