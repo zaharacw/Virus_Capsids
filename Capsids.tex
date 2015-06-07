@@ -537,12 +537,87 @@ So as before, since $\widetilde{R_{60}}(h,k) = (-k , h + k)$, the point $P$ of t
 
 ONE LAST SENTENCE, ABOUT HEY THIS WAS COOL.
 \subsection{Protein Shape}
+While this problem plagued me during my studies of capsids, it was not one that I was able to solve on my own. The following solutions are adaptations of the explanations provided in \cite[p 5-7]{Mannige:2009}.
 \paragraph{}
-The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids (see for instance Figure~\ref{fig:life_cycle})with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids. But this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
+The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids (see for instance Figure~\ref{fig:life_cycle})with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids (FIGURE?). But this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
 
 \subsubsection{Solution 1: Euler's Polyhedral Formula}
+\paragraph{}
+Euler's polyhedral formula is a standard, well known formula which relates the number of vertices $(V)$, edges $(E)$, and faces $(F)$ of a simply connected, convex polyhedra. For the purpose of this work it is acceptable to understand simply connected as meaning, ``without holes." This formula is given below:
+\begin{align}
+	V - E + F = 2
+	\label{eq:euler}
+\end{align}
+%
+\begin{wrapfigure}{r}{.35\textwidth}
+	\centering
+	\caption{$T = 13$ Capsid Model}
+	\includegraphics[width = 0.30\textwidth]{capsid_T13.pdf}
+	\label{fig:T13}
+	\vspace{-15pt}
+\end{wrapfigure}
 
-More cool math using Euler's Polyhedral Formula (taught in early geometry classes). \cite{Mannige:2008}
+Caspar and Klug's theory states that all icosahedral virus capsids are made up of 12 pentagonal capsomeres (represented in grey in Figure~\ref{fig:T13}) and $10(T-1)$ hexagonal capsomeres (represented in red in Figure~\ref{fig:T13}). Additionally, the protomeres come together in groups of 3 to form equilateral triangles since they overall capsid has 3-point rotational symmetry axes. This information, along with Equation~(\ref{eq:euler}) should be enough to shed some light on the number of possible sides per protomer, call this number $\sigma$ for ``sides".
+
+Since the number of faces of the overall polyhedra corresponds to the number of individual proteins the following identity holds:
+\begin{align}
+	F = 60 T
+	\label{eq:f}
+\end{align}
+%
+Additionally, because the capsid has no holes, each edge must be shared by two faces. So the overall number of edges would be the number of sides per protein times the number of proteins divided by two, since there are two faces per edge. Thus:
+\begin{align}
+	E = \sigma \dfrac F 2 = \sigma \dfrac{60 T} {2} = 30 T \sigma
+	\label{eq:e}
+\end{align}
+%
+Now when it comes to the vertices, a little ingenuity is required. The theory of quasi-equivalence states that there will be $12$ 5-point vertices and $10(T-1)$ 6-point vertices at the centers of the pentamers and hexamers respectively. Since these vertices occur at the center of the capsomeres let them be labeled as $V_C$. This means that
+\begin{align}
+	V_C = 12 + 10(T - 1) = 10 T + 2
+	\label{eq:vc}
+\end{align}
+%
+The remaining vertices $(V_R)$ must all be 3-point vertices, that is where 3 edges come together, as the final figure has 3-point rotational symmetry. So for each protomer, one of its edges is used up in connecting to the capsomer's center vertex, the $V_C$, and of the remaining $(\sigma - 1)$ sides, each one goes to a 3-point vertex which is shared with 2 other proteins. Putting this all together, remembering there are $60 T$ protomeres, gives:
+\begin{align}
+	V_R = \dfrac{60 T}{3} (\sigma - 1) = 20 T (\sigma - 1) = 20T\sigma - 20T
+	\label{eq:vr}
+\end{align}
+%
+The vertices must either be the center of a capsomere $(V_C)$, or not $(V_R)$, and thus the total number of vertices is given my combining Equations (\ref{eq:vc}) and (\ref{eq:vr}).
+\begin{align}
+	V = V_C + V_R = 10T + 2 + 20T\sigma - 20T = 2 + 20T\sigma - 10T
+	\label{eq:v}
+\end{align}
+
+Finally, $E$, $F$, and $V$ are defined in terms of $\sigma$ and $T$, and thus substituting Equations (\ref{eq:f}), (\ref{eq:e}), and (\ref{eq:v}), into Equation (\ref{eq:euler}) should provide a definition for $\sigma$ in terms of $T$.
+\begin{align*}
+	2 & = V - E + F\\
+	2 &= 2 + 20T\sigma - 10T - 30 T \sigma + 60 T \\
+	0 &= 50T - 10T\sigma \\
+	10T\sigma &= 50T \\
+	\sigma &= 5
+\end{align*}
+%
+This means that the individual protein units will have 5 sides, or edges, regardless of the T-number! While this is an amazing result, it is not quite what was expected. The goal was to explain why the standard protomer is represented as a trapezoid, but trapezoids have 4 sides, not 5, so what is going on? In the paper ``On the Tileable Nature of Virus Capsids and the Role of Topological Constraints in Natural Capsid Design," Ranjan V. Mannige explains that there are only a limited number of ways to cover convex pentagons with non-overlapping tilings. Furthermore, there is only one type of tile with 5 sides which can cover the icosahedron, which is classified as a \textit{Type-5} and represented in Figure~\ref{fig:tile5}. From here, all that is needed is to note that this tiling is equivalent to the trapezoidal tiling seen in nature, represented in Figure~\ref{fig:tile_trap}. 
+\begin{figure}[h]
+	\centering
+	\caption{Individual Protein Shape}
+	\begin{subfigure}[h]{0.35\textwidth}
+		\includegraphics[width = \textwidth]{tile5.pdf}
+		\caption{\textit{Type-5} protein shape}
+		\label{fig:tile5}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{0.35\textwidth}
+		\includegraphics[width = \textwidth]{tile_trap.pdf}
+		\caption{Trapezoidal protein shape}
+		\label{fig:tile_trap}
+	\end{subfigure} \\
+	Note that the two shapes are topologically equivalent.
+	\label{fig:tiles}
+\end{figure}
+
+The two different protein shapes represented in Figure~\ref{fig:tiles} are equivalent because the base of the trapezoidal unit is split into two edges. When considering vertices, any place where edges diverge is a vertex. This means that the base of the trapezoidal unit must be split by a vertex because the edge of two other adjoining trapezoids join into the base. This means that the natural occurrence of trapezoidal protein units within icosahedral capsids is not a random occurrence, but is to be expected due to Euler's Polyhedral Formula (\ref{eq:euler}).
 
 \subsubsection{Solution 2: Necessary Symmetry}
 This one is kind of a group theory approach, but really just comes down to saying "Hey that shape is reflexively symmetric!" \cite{Mannige:2008}
