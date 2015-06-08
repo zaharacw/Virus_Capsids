@@ -107,7 +107,7 @@ The important note is that the protomeres are the smallest unit. They are single
 
 \subsection{The History of Icosahedral Symmetry} %%%%% 2.1 History
 
-\subsubsection{Initial Theories of Crick and Watson}
+\subsubsection{Initial Theories of Crick and Watson} \label{sec:C&W}
 \paragraph{}
 In 1956  F. H. Crick and J. D. Watson wrote a paper entitled "Structure of Small Viruses." In this paper they hypothesized that "a small virus contains identical sub-units, packed together in a regular manner" \cite[p 473]{Crick:1956}. While this was not an entirely new idea, Crick and Watson were the first to describe the specifics of the idea and to proclaim it as a feature of all small viruses. This hypothesis was based upon the fact that all plant viruses having been studied at the time were extremely "regular," meaning that for a particular virus each particle was similar, if not identical, in appearance. This belief was strengthened by the fact that viruses can form crystals, a feature only possible if each individual viral molecule is identical.
 
@@ -541,7 +541,7 @@ While this problem plagued me during my studies of capsids, it was not one that 
 \paragraph{}
 The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids (see for instance Figure~\ref{fig:life_cycle})with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids (FIGURE?). But this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
 
-\subsubsection{Solution 1: Euler's Polyhedral Formula}
+\subsubsection{Solution 1: Euler's Polyhedral Formula} \label{sec:euler}
 \paragraph{}
 Euler's polyhedral formula is a standard, well known formula which relates the number of vertices $(V)$, edges $(E)$, and faces $(F)$ of a simply connected, convex polyhedra. For the purpose of this work it is acceptable to understand simply connected as meaning, ``without holes." This formula is given below:
 \begin{align}
@@ -620,7 +620,43 @@ This means that the individual protein units will have 5 sides, or edges, regard
 The two different protein shapes represented in Figure~\ref{fig:tiles} are equivalent because the base of the trapezoidal unit is split into two edges. When considering vertices, any place where edges diverge is a vertex. This means that the base of the trapezoidal unit must be split by a vertex because the edge of two other adjoining trapezoids join into the base. This means that the natural occurrence of trapezoidal protein units within icosahedral capsids is not a random occurrence, but is to be expected due to Euler's Polyhedral Formula (\ref{eq:euler}).
 
 \subsubsection{Solution 2: Necessary Symmetry}
-This one is kind of a group theory approach, but really just comes down to saying "Hey that shape is reflexively symmetric!" \cite{Mannige:2008}
+A second technique for justifying the need for 5 sided, and therefore trapezoidal, protein units is by examining the symmetry needs of the overall capsid. It was established by Caspar and Klug, and explained previously, that the spherical capsids conform to icosahedral symmetry. Additionally, it was noted that due to the physical nature of the protomeres, reflexive symmetry axes are not possible. This meant that out of the two types of icosahedral symmetry, full or rotational, only the rotation symmetry was possible. The importance of this fact is that the capsid may not have any reflexive axes. Knowing that six protomeres come together to form the hexamers, it is possible to systematically examine the available numbers of sides for the proteins, and eliminate those that will not work. 
+
+\begin{figure}[h]
+	\centering
+	\caption{Protomer Options}
+	\begin{subfigure}[h]{.2\textwidth}
+		\includegraphics[width=\textwidth]{sigma3.pdf}
+		\caption{}
+		\label{fig:sigma3}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{.2\textwidth}
+		\includegraphics[width=\textwidth]{sigma4.pdf}
+		\caption{}
+		\label{fig:sigma4}
+	\end{subfigure}
+	~
+	\begin{subfigure}[h]{.2\textwidth}
+		\includegraphics[width=\textwidth]{sigma5.pdf}
+		\caption{}
+		\label{fig:sigma5}
+	\end{subfigure}
+	\\
+	\begin{minipage}[h]{.85\textwidth}
+		\begin{footnotesize}
+		Row A shows 3, 4, and 5 sided protomer shapes in their hexamer form. Row B shows them as single units. Note that the darkened hexagons denote locations of 6-fold symmetry, the triangles denote 3-fold symmetry, and the rectangles denote 2-fold symmetry. The dashed lines denote the mirror, or reflexive, symmetry axes.
+		\end{footnotesize}
+	\end{minipage}
+	\label{fig:mirror}
+\end{figure}
+
+First consider a simple 3 sided protomer, shown in Figure~\ref{fig:sigma3}. An equilateral triangle is the only 3 sided polygon which provides the hexamer with 2, 3, and 5-fold rotational symmetry axes. But, an equilateral triangle has a total of 6 reflexive symmetry axes, as shown. If the triangle is ``flipped over" across any dotted line, the resulting shape is the same as the original. That is to say that the resulting figure could be placed directly over the original. But, as explained in Section~\ref{sec:C&W}, the asymmetric nature of the carbon atoms present in the capsid proteins does not allow for reflexive axes. Thus, the 3 sided protein cannot work.
+
+Next, try a 4 sided protomer, as in Figure~\ref{fig:sigma4}. At first glance this may appear to be the best shape for the protein subunit. Three kites, such as that in the figure mentioned, can come together to form an equilateral triangle. It is known that the protein subunits must be able to come together to form an equilateral triangle since this is face of the icosahedron, so using the simplest shape to do so would make the most sense. But, once again, the kite has 5 reflexive axes. For instance, flip the shape over any one of its edges and it can still be set back upon the original figure. So, as with the 3 sided protomer, the 4 sided will not work.
+
+Finally, consider a 5 sided protomer, shown in Figure~\ref{fig:sigma5}. Recall that in Section~\ref{sec:euler} it was mentioned that the trapezoid is topologically equivalent to the \textit{Type-5} protein shape shown in Figure~\ref{fig:tiles}, due to the base being split into 2 edges by the capsomer construction. Now notice that while the trapezoid has a reflexive axis through the midpoint of the top and base, there are no reflexive axes which extend throughout the entire hexamer. Thus, the five sided trapezoid is the protein shape with the smallest number of possible sides. This is an amazing, although expected, result to have been achieved using no more than an understanding of reflexive and rotational symmetry. 
+
 
 \paragraph{This stuff does not need to be kept, i'm just not sure if I want some of it yet so I don't want to delete it}
 One constant and often unexplained attribute within works discussing icosahedral virus capsids is the authors' choice of subunit shape. Almost always the subunit is represented by a trapezoid with little to no explanation of why. If we recap what we know so far:
