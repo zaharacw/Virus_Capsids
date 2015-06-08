@@ -84,7 +84,7 @@ The purpose of these capsid shells are to protect the virus genetic material as 
 As stated previously, viruses come in a variety of shapes and sizes, defined by their capsid shells. Some are long tubes, similar to a straw, classified as helical viruses, others are roughly spherical, classified as icosahedral viruses, and others do not fall into either of the two previously mentioned categories and are classified as complex (See Figure \ref{fig:virus_types}). Spherical viruses are the focus of this paper. In the late 1950's and early 1960's it was suggested that spherical viruses capsids must conform to icosahedral symmetry \cite{Crick:1956}, \cite{Caspar:1962}. Although there are still many exceptions which continue to be examined, through decades of study and advances in microscope technology the theory that spherical capsids must have icosahedral symmetry has been confirmed both visually and computationally for most cases. What is often left unexplained in papers discussing spherical viruses is the mathematical reasoning behind the theory of their shape.
 
 \begin{figure}[h]
-	\caption{Viral life cycle}
+	\caption{Examples of Viruses}
 	\centering
 	\includegraphics[width = .95\textwidth]{viruses.pdf}
 	\label{fig:virus_types}
@@ -152,8 +152,79 @@ While Caspar and Klug ultimately disproved a flaw in Crick and Watson's theory f
 
 The final important observation made of the helical viruses was that they were flexible. The rod like capsids could bend and flex without breaking. Recalling that the helical capsids are made up only of protomeres, the individual proteins, this meant that the inter-protein bonds did not have to be perfectly identical. The bonds were allowed to vary slightly, or be quasi-equivalent \cite[p 7]{Caspar:1962}. This discovery helped lead to the theory of quasi-equivalent bonds which allows for scalable spherical capsids.
 
-Caspar and Klug agreed with the rationale by Crick and Watson that the spherical capsid must be of cubic symmetry. Similarly, they agreed that the icosahedron was the likeliest structure as it had the most sides, and the largest possible number of individual protein subunits \cite[p 7-8]{Caspar:1962}. While more recent X-ray diffraction photographs had confirmed that some virus particles had icosahedral symmetry, increases in electron microscopes allowed the observation that many capsids had neither 60, nor a multiple of 60, protein sub-units [p 9]. They even noted that it is mathematically impossible to place more than 60 identical unit on the surface of a sphere in such a way that each is identically situated [p 10]. This directly contradicted the claims of Crick and Watson, and was the inspiration for quasi-equivalence.
+Caspar and Klug agreed with the rationale by Crick and Watson that the spherical capsid must be of cubic symmetry. Similarly, they agreed that the icosahedron was the likeliest structure as it had the most sides, and the largest possible number of individual protein subunits \cite[p 7-8]{Caspar:1962}. While more recent X-ray diffraction photographs had confirmed that some virus particles had icosahedral symmetry, increases in electron microscopes allowed the observation that many capsids had more than 60 protein sub-units [p 9]. They even noted that it is mathematically impossible to place more than 60 identical unit on the surface of a sphere in such a way that each is identically situated [p 10]. This directly contradicted the claims of Crick and Watson, and was the inspiration for quasi-equivalence.
 
+Inspired by Fuller geodesic domes, Caspar and Klug recognized that it is possible to construct icosahedra from hexagons and pentagons. Specifically, they sought to find a way to fold a planar net, that is a plane which is constructed of one repeated shape, into the shape of an icosahedron. Relying on the work of G. S. Pawley's ``Plane groups on polyhedra," they determined that it is only possible to to fold planar nets made of either squares or equilateral triangles onto the surface of convex polyhedra. Because the square has 4-fold rotational symmetry it could not be used as the goal is to create a polyhedra with 2,3,5 rotational symmetry. Furthermore, it is possible to fold the equilateral triangle net into a convex polyhedra if either 3, 4, or 5 triangles are joined at the vertices, instead of 6 as in the net. Because the goal was to deviate as little as possible, and thus keep everything quasi-equivalent, they chose to use all 5-vertices, which results in the icosahedron \cite[p 11-13]{Caspar:1962}. This process can also be thought of as taking a hexagonal net and removing $\rfrac{1}{5}$ of specific hexagons to make pentagons. The folding of such a net will also result in an icosahedron (Figure~\ref{fig:mannige_net}).
+
+To get from an icosahedron made up of equilateral triangles, to a capsid constructed of pentamers and hexamers, it must be remembered that the equilateral triangle can be split into 3 identical sub-units, refer to Figure~\ref{fig:capsid_color}. The equilateral triangle unit that Capsar and Klug spoke of is highlighted in purple. This unit can be broken up into 3 sub-units. These trapezoidal subunits are the individual protomeres. Notice that when 5 of the triangles come together, there are really 5 protomeres coming together to form a pentamer, highlighted in grey, and when 6 triangles come together there are really 6 protomers coming together to form a hexamer, highlighted in red. So while the capsid was constructed by folding an equilateral triangle net, it can be viewed as being entirely constructed from the red and grey capsomeres. This is the essence of quasi-equivalence, that the biological difference between the 5-fold bonds and the 6-fold bods are insignificant.
+
+\begin{figure}[h]
+	\centering
+	\caption{Capsid represented as hexamer, pentamer, and triangular unit}
+	\includegraphics[width = .45\textwidth]{capsid_color.pdf}
+	\label{fig:capsid_color}
+		\begin{minipage}[h]{.9\textwidth}
+		\begin{footnotesize}
+		Black = pentamer, red = hexamer, purple = triangular unit.
+		\end{footnotesize}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\caption{Capsids Folded From Hexagonal Nets}
+	\includegraphics[width = .9\textwidth]{hex_net.pdf}
+	\begin{minipage}[h]{.9\textwidth}
+		\begin{footnotesize}
+		Mannige thesis page 13
+		\end{footnotesize}
+	\end{minipage}
+	\label{fig:mannige_net}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\caption{Calculating T-Numbers}
+	\includegraphics[width = .9\textwidth]{zlotnick_t.pdf}
+	\begin{minipage}[h]{.9\textwidth}
+		\begin{footnotesize}
+		zlotnick p 18
+		\end{footnotesize}
+	\end{minipage}
+	\label{fig:num_color}
+\end{figure}
+
+The final important product of Caspar and Klug's theory of quasi-equivalence was the T-number, for \textit{triangulation number}. An icosahedron has 20 faces. When the icosahedron is broken into smaller equilateral triangles, it will have $20T$ smaller triangular facets. To determine the T-number for a specific capsid, begin at one of the 5-fold vertices of the capsid, so at a protomer. Then count, in 2 straight lines, the number of 6-fold vertices, or hexameres, that it takes to get to the next 5-fold vertex (Figure~\ref{fig:mannige_net}). Now consider the movement taken in one direction to be the number h, and the movement in the other direction to be k. Then the T-number for the specific capsid examined will be $T = h^2 + hk + k^2$. 
+
+T-numbers are important because they classify the size of the capsid by determining the number of individual proteins. Since the capsid will have $20T$ equilateral triangle facets and each facet consists of 3 protomeres, the resulting capsid will have $P=3*20T =60T$ individual protein units. Knowing the overall number of proteins also allows for the calculation of the number of hexameres. Each icosahedral capsid must have 12 5-fold vertices, since it is an icosahedron. Thus there are $12*5=60$ proteins used up in pentamers, leaving $60T-60 = 60(T-1)$ proteins for the hexamer. Since each hexamer is 6 proteins there are $\rfrac{60(T-1)}{6} = 10(T-1)$ hexamers per capsid.
+
+It is very powerful to state that the T-number uniquely defines the number of proteins per capsid. This says that given an equilateral triangle grid with 2 axes, label them the \textit{h-axis} and \textit{k-axis}, oriented at $60\degree$ to one another, if an equlateral triangle is drawn with one vertex at the origin, $(0,0)$, and another at point $(h,k)$, then the number of smaller triangular units which fit inside the larger one is given by T (Figure~\ref{fig:num_color}). While this is easy to confirm in the case where either h or k is zero, it is more difficult when $h, k \neq 0$.
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\caption{Classes based upon T-Numbers}
+	\includegraphics[width=.35\textwidth]{t_class.pdf}
+	\begin{minipage}[h]{.9\textwidth}
+		\begin{footnotesize}
+		prasad 24
+		\end{footnotesize}
+	\end{minipage}
+	\vspace{-20pt}
+	\label{fig:t_class}
+\end{wrapfigure}
+The T-number classification holds more than just the overall capsid size, it also describes the ``twist" in the capsid. There are 3 general classifications of icosahedral capsids. Class 1 is where $h > k = 0$. These capsids form perfect icosahedrons. Class 2 are the skew classes, where $h > k > 0$. And Class 3 is where $h=k$ \cite{Mannige:2010} \cite[p 22-24]{Prasad:2012}. Figure~\ref{fig:t_class} provides a visual representation of the classes based upon their T-number. This classification has provided a direction in which to explore why some T-numbers, specifically those of Class 3, are less prevalent in natures \cite{Mannige:2010}. Figure~\ref{class_ex} provides a visual representation of the differences in the classes. It is included solely because I believe the slight differences in the capsids, the peaks and angles, are simply beautiful.
+
+\begin{figure}[h!]
+	\centering
+	\caption{Capsid Class Examples}
+	\includegraphics[width = .9\textwidth]{class_ex.pdf}
+	\begin{minipage}[h]{.9\textwidth}
+		\begin{footnotesize}
+		mannige 2010
+		\end{footnotesize}
+	\end{minipage}
+	\label{fig:class_ex}
+\end{figure}
 
 \subsubsection{Recent Work}
 \paragraph{}
@@ -667,7 +738,7 @@ Finally, consider a 5 sided protomer, shown in Figure~\ref{fig:sigma5}. Recall t
 
 \section{Conclusion}
 \paragraph{}
-See it really wasn't that bad.
+This paper was not intended to be an in-depth scientific exploration, but simply and introduction to the theory and beauty of icosahedral capsids. While the scientific theory behind icosahedral virus capsids can take a while to wrap your mind around, at least some of the mathematical explorations performed should have been accessible to all readers. Hopefully this paper has demonstrated some of the wonderful mathematical exercises which arise from the physical sciences. It is to be a reminder that math does not need to be dull rote memorization, nor does it need to be the product of decades of work and theorems. Instead, this paper serves as a reminder to let math be what it is, the fun and exciting exploration of problems both inspired by the real world, and created in our minds.
 
 \newpage
 \bibliographystyle{IEEEtran}
