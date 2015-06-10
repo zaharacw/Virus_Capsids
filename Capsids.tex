@@ -55,11 +55,11 @@
 % CITATION EXAMPE\cite[p 27]{Mannige:2009}
 
 \paragraph{}
-Mathematics has always been a beautiful field full of excitement and discovery. From purely theoretical considerations to strictly applied problems the mathematician is never without mental stimulus. Its inspirations are everywhere and one needs only to be willing to ask why and how to be able to find a fantastic problem to consider. Although the sciences sometimes lack a willingness to work together, Biology is a great realm within which to discover new questions. To find challenging mathematical problems within Biology, one does not need to be an applied mathematician with decades of experience in modeling. Nor does one need to have an extensive background in Biology and science. All that is required is to be willing to examine systems and be willing to ask questions.
+Mathematics is a beautiful field full of excitement and discovery. From purely theoretical considerations to strictly applied problems the mathematician is never without mental stimulus. Her inspirations are everywhere and she needs only to be willing to ask why and how to be able to find a fantastic problem to consider. Although the sciences sometimes lack a willingness to work together, Biology is a great realm within which to discover new questions. To find challenging mathematical problems within Biology one does not need to be an applied mathematician with decades of experience in modeling. Nor does one need to have an extensive background in Biology and science. All that is required is a willingness to examine physical systems and ask questions.
 
-The aim of this paper is to take the reader through the discovery of mathematical puzzles inspired by the physical world. Specifically these mathematical questions will come from the theory of spherical virus capsids. Two problems left unanswered by many of the works on the spherical virus capsids will be laid out and then multiple techniques for solving these problems will be detailed. Although this paper is centered around the mathematics of why icosahedral shells work, it aims to be readable by anyone without external materials, extensive background reading, or a 6' by 20' wall of white board to work out gaps in equations. This paper will ultimately demonstrate that unique problems in mathematics are everywhere and can often be solved with very basic tools if one is willing to apply some hard work and problem solving.
+The aim of this paper is to take the reader through the discovery of various mathematical puzzles inspired by the physical world. Specifically, these mathematical questions will come from the theory of spherical virus capsids. Problems left unanswered by many of the works on the spherical virus capsids will be laid out and then multiple techniques for solving these problems will be detailed. Although this paper is centered around the mathematics of why icosahedral shells work, it aims to be readable by anyone without external materials, extensive background reading, or a 6' by 20' wall of white board to work out gaps in equations. This paper will ultimately demonstrate that unique problems in mathematics are everywhere and can often be solved with very basic tools if one is willing to apply some hard work and problem solving.
 
-A secondary objective of this paper is to be an entertaining introduction to the theory of icosahedral symmetry of virus capsids. It is intended to be a type of tour guide through the development and arguments of this theory. As such, the paper begins with a review of both past and present work on virus capsids. First the pivotal works on the theory of symmetry in spherical virus capsids will be summarized. Then a few selections of the current work both biologists and mathematicians are performing in the field of virus capsids will be examined. Hopefully the reader will come away understanding not only the form and function of icosahedral capsids, but also the amazing, challenging, and ultimately fun mathematical problems that arise within Biology. 
+A secondary objective of this paper is to be an introduction to the theory of icosahedral symmetry of virus capsids. It is intended to be a type of tour guide through the development and arguments of this theory. As such, the paper begins with a review of both past and present work on virus capsids. First, the pivotal works on the theory of symmetry in spherical virus capsids will be summarized. Next, a few selections of the current work both biologists and mathematicians are performing in the field of virus capsids will be examined. Hopefully the reader will come away understanding not only the form and function of icosahedral capsids, but also the amazing, challenging, and ultimately fun mathematical problems that arise within Biology. 
 
 \section{Background} %%%%% 1. Background
 
@@ -69,30 +69,38 @@ Viruses have been shaping human history for millennia. From smallpox and polio t
 \begin{definition*}[Virus]
 Viruses are infectious agents composed of nucleic acid surrounded by a protein shell, called a capsid, and in some cases a membranous envelope. \normalfont{ \cite{Campbell:2002} }
 \end{definition*}
-While the above definition may make viruses seem like simple little organisms, they have a multitude of unique variations. Their nucleic acid genetic material may come in the form of DNA or RNA, depending on the virus, and be either single or double stranded. They can be rod shaped, roughly spherical, or in some cases rather complex in shape. Additionally, viruses are very effective organisms. They cannot replicate or reproduce themselves, but instead inject their genetic material into a host cell. The host cell is then taken over and forced to create copies of the virus genetic material and capsid proteins. Eventually, once it is filled to capacity, the host cell bursts open and the newly created capsids are expelled and proceed to a new host to repeat the process (See Figure \ref{fig:life_cycle}). \cite{Campbell:2002}
+While the above definition may make viruses seem like simple little organisms, they have a multitude of unique variations. Their nucleic acid genetic material may come in the form of DNA or RNA, depending on the virus, and be either single or double stranded. They can be rod shaped, roughly spherical, or in some cases rather complex in shape. Additionally, viruses are very effective organisms. They cannot replicate or reproduce themselves, but instead must inject their genetic material into a host cell. The host cell is then taken over and forced to create copies of the virus genetic material and capsid proteins. Eventually, once it is filled to capacity, the host cell bursts open and the newly created capsids are expelled and proceed to a new host to repeat the process (Figure \ref{fig:life_cycle}). \cite{Campbell:2002}
 
-\begin{figure}[h]
-	\caption{Viral life cycle}
+\begin{figure}[t!]
+	\caption{Viral Life Cycle}
 	\centering
 	\includegraphics[width = .6\textwidth]{life_cycle.pdf}
+	\begin{minipage}[h]{.85\textwidth}
+		\begin{footnotesize}
+			This figure demonstrates the basic life cycle of a virus. First, in \textbf{A}, the virus injects its genetic material into the host cell. The genetic material is then replicated by the host, \textbf{B}, and used to synthesize proteins, \textbf{C}. The proteins then fold into their proper shape, \textbf{D}, and irregularities and mistakes are thrown out. Finally, in \textbf{E}, the newly created proteins form into a capsid around the genetic material and burst forth from the host cell, in \textbf{F}. This figure is taken from \textit{figure 1.1} ref. \cite{Mannige:Thesis}.
+		\end{footnotesize}
+	\end{minipage}
 	\label{fig:life_cycle}
-	thesis 4
 \end{figure}
 	
-The purpose of these capsid shells are to protect the virus genetic material as they move from host cell to host cell. For instance, it has been shown for some virus particles that the capsid shell protects the nucleic acid from ribonuclease and temperature changes \cite[p 5]{Caspar:1962}. This makes the capsid crucial in the infection process. It also means that understanding the structure and mechanics of the capsids may allow scientists to develop ways to disrupt their construction, thus eliminating the virus's ability to travel and infect new host cells. 
+The purpose of the capsid shell is to protect the virus's genetic material as it moves from host cell to host cell. This makes the capsid crucial in the infection process as it has been shown for some to protect the nucleic acid from ribonuclease and temperature change \cite[p 5]{Caspar:1962}. It also means that understanding the structure and mechanics of the capsids may allow scientists to develop ways to disrupt their construction, thus eliminating the virus's ability to travel and infect new host cells. 
 
-As stated previously, viruses come in a variety of shapes and sizes, defined by their capsid shells. Some are long tubes, similar to a straw, classified as helical viruses, others are roughly spherical, classified as icosahedral viruses, and others do not fall into either of the two previously mentioned categories and are classified as complex (See Figure \ref{fig:virus_types}). Spherical viruses are the focus of this paper. In the late 1950's and early 1960's it was suggested that spherical viruses capsids must conform to icosahedral symmetry \cite{Crick:1956}, \cite{Caspar:1962}. Although there are still many exceptions which continue to be examined, through decades of study and advances in microscope technology the theory that spherical capsids must have icosahedral symmetry has been confirmed both visually and computationally for most cases. What is often left unexplained in papers discussing spherical viruses is the mathematical reasoning behind the theory of their shape.
+As stated previously, viruses come in a variety of shapes and sizes defined by their capsid shells. Some are long tubes similar to a straw, classified as helical viruses, others are roughly spherical, classified as icosahedral viruses, and others do not fall into either of the two previously mentioned categories and are classified as complex (Figure \ref{fig:virus_types}). Spherical viruses are the focus of this paper. In the late 1950's and early 1960's it was suggested that spherical viruses capsids must conform to icosahedral symmetry \cite{Crick:1956} \cite{Caspar:1962}. Through decades of study and advances in microscope technology the theory that most spherical capsids conform to icosahedral symmetry has been confirmed both visually and computationally, although there are still exceptions which continue to be examined,  What is often left unexplained in papers discussing spherical viruses is the mathematical reasoning behind the theory of their shape.
 
-\begin{figure}[h]
+\begin{figure}[t!]
 	\caption{Examples of Viruses}
 	\centering
 	\includegraphics[width = .95\textwidth]{viruses.pdf}
 	\label{fig:virus_types}
-	thesis 10
+	\begin{minipage}[h]{.85\textwidth}
+		\begin{footnotesize}
+			Above is an assortment of various sized virus capsids. This figure was originally presented as \textit{figure 2.1} in \cite{Mannige:Thesis}
+		\end{footnotesize}
+	\end{minipage}
 \end{figure}
-
-Before the history and theory are reviewed a few key definitions and their relationship are important.
-
+%
+Before the history and theory of icosahedral symmetry in virus capsids are reviewed a few key definitions are stated below and the relationships between them are discussed.
+%
 \begin{definition*}[Capsid]
 A viral capsid is a protein shell made up multiple copies of one, but in some cases a few, small proteins, which encloses and protects the viral genome.
 \end{definition*}
@@ -103,124 +111,132 @@ A capsomere is a repeated symmetric building unit for the viral capsid. They are
 A promoter is a single protein unit of a capsomere.
 \end{definition*}
 
-The important note is that the protomeres are the smallest unit. They are single asymmetric proteins. Capsomeres are built up of multiple protomers in a symmetric fashion. There can be multiple differently shaped capsomeres made from the same protomer sub-unit. The Capsid is the final shell, made up of the capsomere building blocks.
+The important note is that the protomeres are the smallest unit. They are single asymmetric proteins. Capsomeres are built up of multiple protomers in a symmetric fashion. In icosahedral capsids the capsomeres come as either hexamers, which are made up of 6 promotes, and pentamers, which are made up of 5 protomers. The Capsid is the final shell, made up of the capsomere building blocks.
 
 \subsection{The History of Icosahedral Symmetry} %%%%% 2.1 History
 
 \subsubsection{Initial Theories of Crick and Watson} \label{sec:C&W}
 \paragraph{}
-In 1956  F. H. Crick and J. D. Watson wrote a paper entitled "Structure of Small Viruses." In this paper they hypothesized that "a small virus contains identical sub-units, packed together in a regular manner" \cite[p 473]{Crick:1956}. While this was not an entirely new idea, Crick and Watson were the first to describe the specifics of the idea and to proclaim it as a feature of all small viruses. This hypothesis was based upon the fact that all plant viruses having been studied at the time were extremely "regular," meaning that for a particular virus each particle was similar, if not identical, in appearance. This belief was strengthened by the fact that viruses can form crystals, a feature only possible if each individual viral molecule is identical.
+In 1956  F. H. Crick and J. D. Watson wrote a paper entitled ``Structure of Small Viruses." In this paper they hypothesized that ``a small virus contains identical sub-units, packed together in a regular manner" \cite[p 473]{Crick:1956}. While this was not an entirely new idea, Crick and Watson were the first to describe the specifics of the idea and to proclaim it as a feature of all small viruses. This hypothesis was based upon the fact that all plant viruses having been studied at the time were extremely "regular," meaning that for a particular virus each particle was similar, if not identical, in appearance. This belief was strengthened by the fact that viruses can form crystals, a feature only possible if each individual viral molecule is identical.
 
-At the time of their writing, viruses had only been observed to follow the rod shape of the tobacco-mosaic virus (TMV), as studied by Tubingen and Berkley, or the spherical shape of the turnip yellow mosaic virus (TYMV), as studied by Markham. Indeed, more research had been done on the Tobacco Mosaic Virus than any spherical virus at the time and so many conjectures were made from these observations. For instance, the tobacco mosaic virus consists of 94\% protein and 6\% RNA \cite[p 473]{Crick:1956}. This suggests that proteins must be repeated as there is not enough RNA to code unique proteins in that ratio. Very early X-Ray work showed that the each TMV particle was made up of sub-units of some sort. More importantly, Crick and Watson were able to observe that the TMV particles had a screw like axis, which acted as a symmetry axis, thus placing each sub-unit in an identical environment as the rest.
+At the time of their writing, viruses had only been observed to follow the rod shape of the tobacco-mosaic virus (TMV), as studied by Tubingen and Berkley, or the spherical shape of the turnip yellow mosaic virus (TYMV), as studied by Markham. Indeed, more research had been done on the tobacco mosaic virus than any spherical virus at the time and so many conjectures were made from these observations. For instance, the tobacco mosaic virus consists of 94\% protein and 6\% RNA \cite[p 473]{Crick:1956}. This suggests that proteins must be repeated as there is not enough RNA to code unique proteins in that ratio. Very early X-Ray work showed that the each TMV particle was made up of specific sub-units. More importantly, Crick and Watson were able to observe that the TMV particles had a screw like axis, which acted as a symmetry axis, thus placing each sub-unit in an identical environment as the rest.
 
-While Crick and Watson never used the words capsomere and protomer in their paper, it is beneficial to differentiate them here. In the case of the TMV, the sub-units that Crick and Watson were speaking of were actually the individual protein units, the protomeres. This is evidenced by their description of the sub-unit as the "small globular proteins" \cite[p 473]{Crick:1956}. In the case of helical viruses there are actually no capsomeres, the repeated sub-unit packed around a helical axis are simply the individual proteins themselves \cite[p 474]{Crick:1956}. It is helpful to understand what Crick and Watson were observing on the TMV particles in order to understand the conjectures they made about spherical virus.
+While Crick and Watson never used the words capsomere and protomer in their paper, it is beneficial to differentiate them here. In the case of the TMV, the sub-units that Crick and Watson were speaking of were the individual protein units, the protomers. This is evidenced by their description of the sub-unit as the ``small globular proteins" \cite[p 473]{Crick:1956}. In the case of helical viruses there are no capsomeres; the repeated sub-unit packed around a helical axis are simply the individual proteins themselves \cite[p 474]{Crick:1956}. It is helpful to recognize these observations of the TMV particles in order to understand the conjectures Crick and Watson made about spherical virus.
 
-Crick and Watson extended their observations of the TMV particles to the less studied spherical viruses. It had been shown that TYMV and bushy stunt virus would crystalize into a unit cell that had the shape of a cube. This forces the individual virus particles to have cubic symmetry. Indeed, Crick and Watson were in communication with Caspar who had been able to clearly demonstrate the bushy stunt virus had cubic symmetry \cite[p 474]{Crick:1956}. 
+Crick and Watson extended their observations of the TMV particles to the less studied spherical viruses. It had been shown that TYMV and bushy stunt virus (BSV) would crystalize into a unit cell that had the shape of a cube. While a mathematical justification is beyond the scope of this paper, identical particles crystalizing into a cube forces the individual virus particles to have cubic symmetry. Crick and Watson were even in communication with D. L. D. Caspar who had been able to clearly demonstrate BSV particles had cubic symmetry \cite[p 474]{Crick:1956}. 
 
-Cubic symmetry relates to the rotational possibilities of the particle. It means that through the shell there are axes which one can rotate about 120\degree and the figure will end up in an identical position as it started. This axes are called 3-fold rotational axes. To see this in action, take a die and hold it by two opposing corners. Now rotate the die $\rfrac{1}{3}$ of a turn. Although the position of the numbers has changed, the die is in an identical position as it started. Thus this die, a cube, is an example of a figure with cubic symmetry.
-
-While the virus particle can be rotated, the individual sub-units cannot be "flipped". This is due to the presence of asymmetric carbon atoms \cite[p 474]{Crick:1956}. This means there can be no reflective symmetry axes on the particle. For a visual representation of a figure rotational symmetry axes but no reflective symmetry axes see Figure ~\ref{fig:reflect}. Crick and Watson then examined all possible cubic point groups, which are listed in Table ~\ref{table:cubic_groups}. [Is it worth defining a point group?]
-
-\begin{figure}[h]
-	\caption{Symmetry examples. Use figures from Mannige}
+\begin{figure}[t!]
+	\caption{Rotational vs Reflexive Symmetry}
 	\centering
 	\includegraphics[width = .95\textwidth]{symmetry_examples.pdf}
 	\label{fig:reflect}
-	thesis page 20
-\end{figure}
-
-\begin{figure}[h]
-	\caption{Table of cubic point groups}
-	\centering
-	\includegraphics[width = .95\textwidth]{point_groups.pdf}
-	\label{table:cubic_groups}
-	thesis 17
-\end{figure}
-
-They noticed that with each group, the number of possible asymmetric sub-units was a multiple of 12. For instance, with the 20 sided icosahedron, each side can be split into 3 asymmetric sub-units, thus creating a total of 60 which is of course a multiple of 12. Recall the reason they are concerned with the possible number of asymmetric units, not the number of faces, is because they wanted the smallest possible unit, and because the individual proteins were bound to be asymmetric simply due to their nature. Additionally, this reasoning was influenced by their observation of the TMV particles, which had only protomeres. Thus, they were not considering the forms the proteins may aggregate into before the final shell was constructed, but instead concerned only with the individual units being in identical environments. This was their final, and ultimately erroneous conclusion, that the number of proteins in a viral shell will be a multiple of 12 \cite[p 475]{Crick:1956}.
-
-It is important to note that their process was one of trying to apply a set of rules to the limited observations they had of both spherical and helical viruses. They were not trying to ask mathematical questions as to whether or not their results should be expected, but were instead simply trying to explain observed patters. This technique, of describing observations, was also the route taken by Caspar and Klug a few years later, only with a more accurate outcome.
-
-\subsubsection{The Theory of Quasi-Equivalence}
-\paragraph{}
-
-D. L. D. Caspar and  A. Klug wrote many papers on the structure of viruses. Their most prominent work was done in 1962 in a paper entitled "Physical Principles in the Construction of Regular Viruses" \cite{Caspar:1962}. In this work they built upon the ideas and groundwork set forth by Crick and Watson, only with more scientific tools at their disposal. The results were to validate the general idea set forth by Crick and Watson, but to ultimately correct the theory and form what is still the basis of belief today.
-
-Much of their paper repeats in greater detail the same concepts set forth by Crick and Watson. They both explained why there may only be a limited number of types of proteins in any one capsid and why the number of ways to efficiently design a container using a large number of identical proteins is very limited. Only Caspar and Klug had more scientific evidence, largely due to the greater volume of research that had been performed by 1962. For instance, by studying the weight of the RNA within small viruses, and the average number of nucleotides required to make a protein, they were able to prove that there is only enough genetic material in small viruses to produce 2 or 3 proteins \cite[p 1]{Caspar:1962}. This proved that with small viruses the number of types of proteins in the capsids is limited to 1 or 2. Additionally, advances in X-ray diffraction and electron microscopy had definitively shown for multiple small viruses that they were indeed made up of repeated  identical sub-units \cite[p 2]{Caspar:1962}. What differed from Crick and Watson was the number of individual protomers possible in spherical viruses.
-
-While Caspar and Klug ultimately disproved a flaw in Crick and Watson's theory for spherical viruses, it is worth noting that they also confirmed Crick and Watson's theory for helical ones. Caspar and Klug also relied heavily on the study of TMV for their understanding of helical viruses. Through advances in X-ray diffraction and other physical and chemical studies, they were able to definitively show that each individual protein in a TMV capsid is structurally and chemically identical to the others. They also found that the proteins would form into the helical shell without the presence of the TMV RNA \cite[p 4-5]{Caspar:1962}. These pieces of evidence added to the observations that the TMV capsid consisted of repeated units around a helical symmetry axis.
-
-The final important observation made of the helical viruses was that they were flexible. The rod like capsids could bend and flex without breaking. Recalling that the helical capsids are made up only of protomeres, the individual proteins, this meant that the inter-protein bonds did not have to be perfectly identical. The bonds were allowed to vary slightly, or be quasi-equivalent \cite[p 7]{Caspar:1962}. This discovery helped lead to the theory of quasi-equivalent bonds which allows for scalable spherical capsids.
-
-Caspar and Klug agreed with the rationale by Crick and Watson that the spherical capsid must be of cubic symmetry. Similarly, they agreed that the icosahedron was the likeliest structure as it had the most sides, and the largest possible number of individual protein subunits \cite[p 7-8]{Caspar:1962}. While more recent X-ray diffraction photographs had confirmed that some virus particles had icosahedral symmetry, increases in electron microscopes allowed the observation that many capsids had more than 60 protein sub-units [p 9]. They even noted that it is mathematically impossible to place more than 60 identical unit on the surface of a sphere in such a way that each is identically situated [p 10]. This directly contradicted the claims of Crick and Watson, and was the inspiration for quasi-equivalence.
-
-Inspired by Fuller geodesic domes, Caspar and Klug recognized that it is possible to construct icosahedra from hexagons and pentagons. Specifically, they sought to find a way to fold a planar net, that is a plane which is constructed of one repeated shape, into the shape of an icosahedron. Relying on the work of G. S. Pawley's ``Plane groups on polyhedra," they determined that it is only possible to to fold planar nets made of either squares or equilateral triangles onto the surface of convex polyhedra. Because the square has 4-fold rotational symmetry it could not be used as the goal is to create a polyhedra with 2,3,5 rotational symmetry. Furthermore, it is possible to fold the equilateral triangle net into a convex polyhedra if either 3, 4, or 5 triangles are joined at the vertices, instead of 6 as in the net. Because the goal was to deviate as little as possible, and thus keep everything quasi-equivalent, they chose to use all 5-vertices, which results in the icosahedron \cite[p 11-13]{Caspar:1962}. This process can also be thought of as taking a hexagonal net and removing $\rfrac{1}{5}$ of specific hexagons to make pentagons. The folding of such a net will also result in an icosahedron (Figure~\ref{fig:mannige_net}).
-
-To get from an icosahedron made up of equilateral triangles, to a capsid constructed of pentamers and hexamers, it must be remembered that the equilateral triangle can be split into 3 identical sub-units, refer to Figure~\ref{fig:capsid_color}. The equilateral triangle unit that Capsar and Klug spoke of is highlighted in purple. This unit can be broken up into 3 sub-units. These trapezoidal subunits are the individual protomeres. Notice that when 5 of the triangles come together, there are really 5 protomeres coming together to form a pentamer, highlighted in grey, and when 6 triangles come together there are really 6 protomers coming together to form a hexamer, highlighted in red. So while the capsid was constructed by folding an equilateral triangle net, it can be viewed as being entirely constructed from the red and grey capsomeres. This is the essence of quasi-equivalence, that the biological difference between the 5-fold bonds and the 6-fold bods are insignificant.
-
-\begin{figure}[h]
-	\centering
-	\caption{Capsid represented as hexamer, pentamer, and triangular unit}
-	\includegraphics[width = .45\textwidth]{capsid_color.pdf}
-	\label{fig:capsid_color}
-		\begin{minipage}[h]{.9\textwidth}
+	\begin{minipage}[h]{.85\textwidth}
 		\begin{footnotesize}
-		Black = pentamer, red = hexamer, purple = triangular unit.
+			The above figure demonstrates both rotational and mirror symmetries. The columns show rotational symmetries of order 1 to 6 from left to right. The top row represents a subunit which has only rotational symmetry. Notice there is no way to mirror a \textbf{P} and result in the same figure. The second row shows how mirror symmetries are available if the subunit has a mirror axes, represented by the dashed line. Notice how the \textbf{A} can be flipped horizontally and the letter is unchanged. This figure originally appeared as \textit{figure 2.6} in \cite{Mannige:Thesis}.
 		\end{footnotesize}
 	\end{minipage}
 \end{figure}
 
-\begin{figure}[h!]
+Additionally, they observed that while the virus particle can be rotated, the individual sub-units cannot be ``flipped". This is due to the presence of asymmetric carbon atoms within the proteins \cite[p 474]{Crick:1956}. This means there can be no mirror symmetry axes on the particle. A mirror axis is one over which a figure can be mirrored and result in the same figure. For a visual representation of rotational versus mirror symmetry axes see Figure~\ref{fig:reflect}. Using the previous mentioned observations, Crick and Watson then systematically examined all possible solids which have 3 fold rotationally axes. These are listed in Figure~\ref{table:cubic_groups}. Note that a point group is the group of rotational symmetry operations of a solid. For the purposes of this paper, it can simply be thought of as the ways in which platonic solids can be rotated and remain in the same position.
+
+\begin{figure}[t!]
+	\caption{Table of cubic point groups}
+	\centering
+	\includegraphics[width = .95\textwidth]{point_groups.pdf}
+	\label{table:cubic_groups}
+	\begin{minipage}[h]{.85\textwidth}
+		\begin{footnotesize}
+			There are 3 types of cubic point groups with no mirror symmetries. They are classified by the types of rotational axes available. The above figure gives the platonic solids which possesses each type of symmetry, the types of axes, and the order of the group. They are considered \textit{cubic} point groups as the 3 element is the largest common to them all. The order of the point group is the number of unique ways to arrange the points of the solid. The order corresponds to the number of identical subunits which the solid may be broken in to. Note that the dark oblong marks are 2-fold rotational axes, the triangles are 3-folds, squares are 4-folds and pentagons are 5-folds. This figure originally appeared as \textit{figure 2.4} in \cite{Mannige:Thesis}.
+		\end{footnotesize}
+	\end{minipage}
+\end{figure}
+
+Through their exploration of cubic point groups they noticed that the number of possible asymmetric sub-units was a multiple of 12 for all of the groups. But, with 20 sides the icosahedron provided the largest number of sub-units. Each side can be split into 3 asymmetric sub-units, thus creating a total of 60 which is of course a multiple of 12. Recall the reason they were concerned with the possible number of asymmetric units, not the number of faces, was because they wanted the smallest possible unit, and because the individual proteins were bound to be asymmetric simply due to their nature. Additionally, this reasoning was influenced by their observation of the TMV particles which had only protomers. Thus, they were not considering the forms the proteins may aggregate into before the final shell was constructed, but instead concerned only with the individual units being in identical environments. This was their final, and ultimately erroneous conclusion; spherical capsids are icosahedrons composed of 60 identical asymmetric units. \cite[p 475]{Crick:1956}.
+
+It is important to note that their process was one of trying to apply a set of rules to the limited observations they had of both spherical and helical viruses. They were not trying to ask mathematical questions as to whether or not their results should be expected, but were instead simply trying to explain observed patters. This technique, of describing observations, was also the route taken by Caspar and Klug a few years later, only with a more accurate outcome.
+
+\subsubsection{The Theory of Quasi-Equivalence} \label{sec:CK}
+\paragraph{}
+
+D. L. D. Caspar and  A. Klug wrote many papers on the structure of viruses. Their most prominent work was done in 1962 in a paper entitled ``Physical Principles in the Construction of Regular Viruses" \cite{Caspar:1962}. In this work they built upon the ideas and groundwork set forth by Crick and Watson, only with more scientific tools at their disposal. The results validated the general idea set forth by Crick and Watson, but ultimately corrected the overall theory into what is still the basis of the scientific theory that stands today.
+
+Much of their paper repeats in greater detail the same concepts set forth by Crick and Watson. Both groups explained why there may only be a limited number of types of proteins in any one capsid. They also explained why the number of ways to efficiently design a container using a large number of identical proteins is very restricted. But, Caspar and Klug had greater access to scientific evidence, largely due to the greater volume of research that had been performed and published by 1962. For instance, by studying the weight of the RNA within small viruses and the average number of nucleotides required to make a protein, they were able to prove that there was only enough genetic material in small viruses to produce 2 or 3 types of proteins \cite[p 1]{Caspar:1962}. This proved that with small viruses the types of proteins in the capsids was limited to 1 or 2. Additionally, advances in X-ray diffraction and electron microscopy definitively demonstrated that for multiple small viruses were indeed made up of repeated  identical sub-units, just as in Crick and Watson's hypothesis \cite[p 2]{Caspar:1962}. What differed in theory from Crick and Watson was the number of individual protomers possible in spherical viruses.
+
+While Caspar and Klug ultimately disproved a flaw in Crick and Watson's theory for spherical viruses, it is worth noting that they also confirmed Crick and Watson's theory for helical ones. Caspar and Klug also relied heavily on the study of TMV for their understanding of helical viruses. Through advances in X-ray diffraction and other physical and chemical studies, they proved that each individual protein in a TMV capsid is structurally and chemically identical to the others. They also found that the proteins would form into the helical shell without the presence of the TMV RNA \cite[p 4-5]{Caspar:1962}. These pieces of evidence added to the observations that the TMV capsid consisted of repeated units around a helical symmetry axis.
+
+The final important observation made of the helical viruses was that they were flexible. The rod like capsids could bend and flex without breaking. Recalling that the helical capsids are made up only of protomers, the individual proteins, this meant that the inter-protein bonds did not have to be perfectly identical. The bonds were allowed to vary slightly, or be quasi-equivalent \cite[p 7]{Caspar:1962}. This discovery helped lead to the theory of quasi-equivalent bonds which allows for scalable spherical capsids.
+
+Caspar and Klug agreed with the rationale of Crick and Watson that the spherical capsid must be of cubic symmetry. Similarly, they agreed that the icosahedron was the likeliest structure as it had the most sides, and the largest possible number of individual protein subunits \cite[p 7-8]{Caspar:1962}. While more recent X-ray diffraction photographs had confirmed that some virus particles had icosahedral symmetry, developments in electron microscopes allowed the observation that many capsids had more than 60 protein sub-units [p 9]. They even noted that it is mathematically impossible to place more than 60 identical unit on the surface of a sphere in such a way that each is identically situated [p 10]. This directly contradicted the claims of Crick and Watson, and was the inspiration for quasi-equivalence.
+
+Inspired by Fuller geodesic domes, Caspar and Klug recognized that it is possible to construct icosahedra from hexagons and pentagons. Specifically, they sought to find a way to fold a planar net, that is a plane which is constructed of one repeated shape, into the shape of an icosahedron. Relying on the work of G. S. Pawley's ``Plane groups on polyhedra," \cite{Pawley:1962} they determined that it was only possible to to fold planar nets made of either squares or equilateral triangles onto the surface of convex polyhedra. Because the square has 4-fold rotational symmetry it could not be used as the goal was to create a polyhedra with 2,3,5 rotational symmetry. Furthermore, it is possible to fold the equilateral triangle net into a convex polyhedra if either 3, 4, or 5 triangles are joined at the vertices, instead of 6 as in the net. Recall that the helical capsids had taught Caspar and Klug that the inter protein bonds could vary slightly and not break. Thus the goal was to deviate as little as possible, and keep everything quasi-equivalent. For this reason they chose to use all 5-vertices, which results in the icosahedron \cite[p 11-13]{Caspar:1962}. This process can also be thought of as taking a hexagonal net and removing $\rfrac{1}{5}$ of specific hexagons to make pentagons. The folding of such a net will also result in an icosahedron (Figure~\ref{fig:mannige_net}).
+
+\begin{figure}[t!]
 	\centering
 	\caption{Capsids Folded From Hexagonal Nets}
 	\includegraphics[width = .9\textwidth]{hex_net.pdf}
 	\begin{minipage}[h]{.9\textwidth}
 		\begin{footnotesize}
-		Mannige thesis page 13
+		The above figure represents the process of removing triangular facets from a hexagonal grid to construct icosahedra. \textbf{A} gives an example of the hexagonal grid, and the process of counting the T number from pentamer to pentamer. \textbf{B} shows how removing a single triangular faces turns the hexagon into a pentagon. \textbf{C} shows the resulting capsids from the various T number selections represented in \textbf{A}. This figure comes from \textit{figure 2.2} of \cite{Mannige:Thesis}.
 		\end{footnotesize}
 	\end{minipage}
 	\label{fig:mannige_net}
 \end{figure}
 
-\begin{figure}[h!]
+To get from an icosahedron made up of equilateral triangles, to a capsid constructed of pentamers and hexamers, it must be remembered that the equilateral triangle can be split into 3 identical sub-units, refer to Figure~\ref{fig:capsid_color}. The equilateral triangle unit that Capsar and Klug spoke of is highlighted in purple. This unit can be broken up into 3 trapezoidal sub-units. These trapezoidal sub-units are the individual protomers. Notice that when 5 of the triangles come together, there are really 5 protomers coming together to form a pentamer, highlighted in grey, and when 6 triangles come together there are really 6 protomers coming together to form a hexamer, highlighted in red. So while the capsid was constructed by folding an equilateral triangle net, it can be viewed as being entirely constructed from the red and grey capsomeres. This is the essence of quasi-equivalence, that the biological difference between the 5-fold bonds and the 6-fold bonds are insignificant.
+
+\begin{figure}[t!]
+	\centering
+	\caption{Capsid Represented as Hexamer, Pentamer, and Triangular Units}
+	\includegraphics[width = .45\textwidth]{capsid_color.pdf}
+	\label{fig:capsid_color}
+		\begin{minipage}[h]{.75\textwidth}
+		\begin{footnotesize}
+		In the above image pentamers are represented in grey, a single hexamer is highlighted in red, and a single triangular facet is highlighted in purple. The individual trapezoidal protomers are left white when not being highlighted as part of a larger unit. This figure is adapted from \textit{figure 1} in \cite{Mannige:2009}.
+		\end{footnotesize}
+	\end{minipage}
+\end{figure}
+
+The final important product of Caspar and Klug's theory of quasi-equivalence was the T-number, or \textit{triangulation number}. An icosahedron has 20 faces. When the icosahedron is broken into smaller equilateral triangles, it will have $20T$ smaller triangular facets. To determine the T-number for a specific capsid, begin at one of the protomers, the 5-fold vertices of the capsid, and then count, in 2 straight lines, the number of 6-fold vertices, or hexameres, that it takes to get to the next 5-fold vertex. This process is demonstrated in Figure~\ref{fig:mannige_net}. Now consider the movement taken in one direction to be the number h, and the movement in the other direction to be k. Then the T-number for the specific capsid examined will be $T = h^2 + hk + k^2$. Notice that this was not explicitly proven by Caspar and Klug, but only stated to be true.
+
+T-numbers are important because they classify the size of the capsid by determining the number of individual proteins. Since the capsid will have $20T$ equilateral triangle facets (the purple triangle in Figure~\ref{fig:capsid_color}) and each facet consists of 3 protomers, the resulting capsid will have $P=3*20T =60T$ individual protein units. Knowing the overall number of proteins also allows for the calculation of the number of hexameres. Each icosahedral capsid must have 12 5-fold vertices, since it is an icosahedron. Thus there are $12*5=60$ proteins used up in pentamers, leaving $60T-60 = 60(T-1)$ proteins for the hexamers. Since each hexamer is 6 proteins there are $\rfrac{1}{6} 60(T-1) = 10(T-1)$ hexamers per capsid.
+
+\begin{figure}[t!]
 	\centering
 	\caption{Calculating T-Numbers}
 	\includegraphics[width = .9\textwidth]{zlotnick_t.pdf}
 	\begin{minipage}[h]{.9\textwidth}
 		\begin{footnotesize}
-		zlotnick p 18
+		Various T-numbers are shown with their calculations. The right hand side of the figure shows how to count from one pentamer to the next on the actual capsid, whereas the left hand side shows how that counting relates to a face of the icosahedron placed on the \textit{h, k-axes}. The figure is courtesy of \textit{figure 2} \cite{Zlotnick:2005}.
 		\end{footnotesize}
 	\end{minipage}
 	\label{fig:num_color}
 \end{figure}
 
-The final important product of Caspar and Klug's theory of quasi-equivalence was the T-number, for \textit{triangulation number}. An icosahedron has 20 faces. When the icosahedron is broken into smaller equilateral triangles, it will have $20T$ smaller triangular facets. To determine the T-number for a specific capsid, begin at one of the 5-fold vertices of the capsid, so at a protomer. Then count, in 2 straight lines, the number of 6-fold vertices, or hexameres, that it takes to get to the next 5-fold vertex (Figure~\ref{fig:mannige_net}). Now consider the movement taken in one direction to be the number h, and the movement in the other direction to be k. Then the T-number for the specific capsid examined will be $T = h^2 + hk + k^2$. 
-
-T-numbers are important because they classify the size of the capsid by determining the number of individual proteins. Since the capsid will have $20T$ equilateral triangle facets and each facet consists of 3 protomeres, the resulting capsid will have $P=3*20T =60T$ individual protein units. Knowing the overall number of proteins also allows for the calculation of the number of hexameres. Each icosahedral capsid must have 12 5-fold vertices, since it is an icosahedron. Thus there are $12*5=60$ proteins used up in pentamers, leaving $60T-60 = 60(T-1)$ proteins for the hexamer. Since each hexamer is 6 proteins there are $\rfrac{60(T-1)}{6} = 10(T-1)$ hexamers per capsid.
-
-It is very powerful to state that the T-number uniquely defines the number of proteins per capsid. This says that given an equilateral triangle grid with 2 axes, label them the \textit{h-axis} and \textit{k-axis}, oriented at $60\degree$ to one another, if an equlateral triangle is drawn with one vertex at the origin, $(0,0)$, and another at point $(h,k)$, then the number of smaller triangular units which fit inside the larger one is given by T (Figure~\ref{fig:num_color}). While this is easy to confirm in the case where either h or k is zero, it is more difficult when $h, k \neq 0$.
-
+It is very powerful to state that the T-number uniquely defines the number of proteins per capsid. 
 \begin{wrapfigure}{r}{0.4\textwidth}
+	\vspace{-35pt}
 	\centering
-	\caption{Classes based upon T-Numbers}
+	\caption{Classes Based Upon T-Numbers}
 	\includegraphics[width=.35\textwidth]{t_class.pdf}
-	\begin{minipage}[h]{.9\textwidth}
+	\begin{minipage}[h]{.3\textwidth}
 		\begin{footnotesize}
-		prasad 24
+		T-numbers are represented by their place on the \textit{h,k-axes} and color coded by Class. This figure is taken from \textit{figure 5} in \cite{Prasad:2012}
 		\end{footnotesize}
 	\end{minipage}
-	\vspace{-20pt}
+	\vspace{-50pt}
 	\label{fig:t_class}
-\end{wrapfigure}
-The T-number classification holds more than just the overall capsid size, it also describes the ``twist" in the capsid. There are 3 general classifications of icosahedral capsids. Class 1 is where $h > k = 0$. These capsids form perfect icosahedrons. Class 2 are the skew classes, where $h > k > 0$. And Class 3 is where $h=k$ \cite{Mannige:2010} \cite[p 22-24]{Prasad:2012}. Figure~\ref{fig:t_class} provides a visual representation of the classes based upon their T-number. This classification has provided a direction in which to explore why some T-numbers, specifically those of Class 3, are less prevalent in natures \cite{Mannige:2010}. Figure~\ref{class_ex} provides a visual representation of the differences in the classes. It is included solely because I believe the slight differences in the capsids, the peaks and angles, are simply beautiful.
+\end{wrapfigure}This says that given an equilateral triangle grid with 2 axes, label them the \textit{h-axis} and \textit{k-axis}, oriented at $60\degree$ to one another, if an equlateral triangle is drawn with one vertex at the origin, $(0,0)$, and another at point $(h,k)$, then the number of smaller triangular units which fit inside the larger one is given by T (Figure~\ref{fig:num_color}). While this is easy to confirm in the case where either h or k is zero, it is more difficult when $h, k \neq 0$.
+
+The T-number classification holds more than just the overall capsid size, it also describes the ``twist" in the capsid. There are 3 general classifications of icosahedral capsids. Class 1 is where $h > k = 0$. These capsids form perfect icosahedrons. Class 2 are the skew classes, where $h > k > 0$. And Class 3 is where $h=k$ \cite{Mannige:2010} \cite[p 22-24]{Prasad:2012}. Figure~\ref{fig:t_class} provides a visual representation of the classes based upon their T-number. This classification has provided a direction in which to explore why some T-numbers, specifically those of Class 3, are less prevalent in natures \cite{Mannige:2010}. Figure~\ref{fig:class_ex} provides a visual representation of the differences in the classes.
 
 \begin{figure}[h!]
 	\centering
 	\caption{Capsid Class Examples}
 	\includegraphics[width = .9\textwidth]{class_ex.pdf}
 	\begin{minipage}[h]{.9\textwidth}
+		\centering
 		\begin{footnotesize}
-		mannige 2010
+		Figure originally printed as \textit{figure 2} in \cite{Mannige:2010}
 		\end{footnotesize}
 	\end{minipage}
 	\label{fig:class_ex}
@@ -228,72 +244,73 @@ The T-number classification holds more than just the overall capsid size, it als
 
 \subsubsection{Recent Work}
 \paragraph{}
-While the focus of this paper is on a cursory understanding of icosahedral virus capsids and the mathematical questions which this theory inspires, it is beneficial to note some of the current work which is being performed in the field virus capsids. Reidun Twarock is one of the foremost current mathematical biologists working to understand abnormal virus capsids. As previously mentioned, there are capsids which appear spherical, but do not conform to icosahedral symmetry. She is applying methods from the field of quasicrystals to provide new tiling methods for the capsids. One particular addition is allowing for translations, instead of only rotations as in the Caspar and Klug theory, in the group movements of the capsid tiles \cite{Twarock:2004} \cite{Twarock:2006}. 
+While the focus of this paper is on a cursory understanding of icosahedral virus capsids and the mathematical questions which this theory inspires, it is beneficial to note some of the current work which is being performed in the field virus capsids. Reidun Twarock is one of the foremost current mathematical biologists working to understand abnormal virus capsids. She is applying methods from the field of quasicrystals to provide new tiling methods for the abnormal capsids. As previously mentioned, there are capsids which appear spherical, but do not conform to icosahedral symmetry. One particular addition is allowing for translations, instead of only rotations as in the Caspar and Klug theory, in the group movements of the capsid tiles \cite{Twarock:2004} \cite{Twarock:2006}. 
 
-An additional question left unanswered by the Caspar and Klug theory is why larger T-number capsids and skew T-number capsids are less frequent in nature. Ranjin Mannige and Charles L. Brooks III have worked to answer these questions. They have mathematically modeled the stress placed on the inter-protein bonds caused by a capsid being of a skew, or large T-number. As the capsid size goes up, or skewness increases, the angle between the proteins in the pentamers versus the hexamers begins to vary more and more. They argue that this strain caused by the necessity of the altered angles, explains for natures selections away from heavily skewed capsids \cite{Mannige:2009}.
+An additional question left unanswered by the Caspar and Klug theory is why larger T-number capsids and Class 3 capsids are less frequent in nature. Ranjin Mannige and Charles L. Brooks III have worked to answer these questions. They have mathematically modeled the stress placed on the inter-protein bonds caused by a capsid being of a skew, or large T-number. As the capsid size goes up, or skewness increases, the angle between the proteins in the pentamers versus the hexamers begins to vary more and more. Notice how in Figure~\ref{fig:class_ex} the Class 3 capsids have more rigid peaks. They argue that this strain caused by the necessity of the altered angles explains for natures selections away from heavily skewed capsids \cite{Mannige:2009}.
 
-Finally, while more and more is understood about the limitations of the capsid shape, much is still to be learned about the physical and chemical properties of the capsid construction process. Adam Zlotnick has used statistical mechanical models to examine the details of the capsid assembly chemical reactions. He has gone further to attempt to model how populations of capsids interact with one another \cite{Zlotnick:2005}. In a simmilar fashion, Roya Zandi et all have also provided a model for capsid assembly. Their model has also gone one step further, to provide mechanisms for viral genome release \cite{Zandi:2004}.
+Finally, while more and more is understood about the limitations of the capsid shape, much is still to be learned about the physical and chemical properties of the capsid construction process. Adam Zlotnick has used statistical mechanical models to examine the details of the capsid assembly chemical reactions. He has gone further to attempt to model how populations of capsids interact with one another \cite{Zlotnick:2005}. In a simmilar fashion, Roya Zandi et all have also provided a model for capsid assembly. Their model has also gone one step further to provide mechanisms for viral genome release \cite{Zandi:2004}.
 
 While most of these works are beyond the scope of this paper, it is worth noting that although the theory being examined here is about 50 years old, it is still a prominent field of science today. Understanding how viruses transmit their genetic material is extremely important, and scientists will continue to study capsid structure and properties so long as there are viruses to be cured.
 
 \section{Mathematical Problems and Solutions} %%%%% MATH SECTION%%%%%
+\paragraph{}
 Recall that the one of the goals of this paper is to explore the fun mathematical problems that can be inspired by biology. Thus, in the following sections mathematical problems from two different areas of icosahedral capsid theory will be explored. Multiple solution techniques will be given for the problems with varying degrees of mathematical difficulty.
 
 \subsection{Triangulation Numbers} %%%%% T - NUM Problems%%%%%
 \paragraph{}
-There are two problems which arise from Caspar and Klug's definition and claims about their T-number. First, Caspar and Klug claim that their T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units found in a spherical capsid through the formula $P = 60T$. Recall this 60 is because the T number measure the number of triangular facets per side of the icosahedron and each facet is composed of 3 protomeres, the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better electron microscopes, the mathematical question remains, was this expected? Will the T-number always work for integers h and k. The first problem will be to establish that using points $(0,0)$ and $(h,k)$ as the base of an equilateral triangle will result in a triangle will an area equal to T times the area of an equilateral triangle with unit length, that is base equal to one. The second question that must be asked is, if two corners are placed at $(0,0)$ and $(h,k)$ will the third corner, call it point P, always fall on an integer valued point? (See Figure~\ref{fig:setup})To answer these questions we will take 2 different approaches. One requires no mathematics beyond high-school, and the second only requires a bit of knowledge of linear algebra.
+There are two problems which arise from Caspar and Klug's definition and claims about the T-number. First, Caspar and Klug claimed that the T-number, $T = h^2 + hk + k^2$, defines the exact number of identical asymmetric protein sub-units $(P)$ found in a spherical capsid through the formula $P = 60T$. Recall the 60 is because the T number measure the number of triangular facets per side of the icosahedron and each facet is composed of 3 protomeres, the protein sub-unit. Since an icosahedron has 12 sides, we would have $3*12*T = 60T$ proteins per capsid. While their T-number has been confirmed as accurate through better electron microscopes, the mathematical question remains, was this expected? Will the T-number always work for integers h and k? The first problem will be to establish that using points $(0,0)$ and $(h,k)$ as the base of an equilateral triangle will result in a triangle with an area equal to T times the area of an equilateral triangle with unit length, that is base equal to one. The second question that must be asked is, if two corners are placed at $(0,0)$ and $(h,k)$ will the third corner, call it point P, always fall on an integer valued point (Figure~\ref{fig:setup})? Two different approaches will be used to answer each question. One requires no mathematics beyond high-school, and the second only requires some knowledge of linear algebra.
 
 \begin{figure}[h]
 	\caption{Equilateral Triangle on h, k-axes}
 	\centering
-	\begin{subfigure}[h]{.75\textwidth}
-	\begin{center}
-	\includegraphics[width=.8\textwidth]{ddagger0_tri_setup.pdf}
-	\end{center}
+	\includegraphics[width=.7\textwidth]{ddagger0_tri_setup.pdf}
+	\begin{minipage}[h]{.9\textwidth}
+		\begin{footnotesize}
 		One face of a $T=h^2 + hk + k^2$ icosahedral capsid is represented on the h, k coordinate system. Recall when 		working with T numbers that the h-axis is in the standard horizontal orientation, and the k-axis is at $60 \degree$ to t		he h-	axis in a counter clockwise rotation.
-	\end{subfigure}
+		\end{footnotesize}
+	\end{minipage}
 	\label{fig:setup}
 \end{figure}
 
 \subsubsection{Solution 1: Geometry} %%%%% Geometry Solutions %%%%%
-The goal of this approach is to establish that if we are given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. This solution will be attempted with no more than the skills of someone who has passed high school geometry.
+The goal of this approach is to establish that if given a point $(h,k)$ as defined by Caspar and Klug (that is that the h-axis is the standard x-axis and the k-axis is a $60\degree$ rotation counter-clockwise of the h-axis) that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ will equal the area of an equilateral triangle with base length 1 times $T$ where $T = h^2 + hk + k^2$. This first solution provided utilizes no more skills than someone who has passed high school geometry.
 
-First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If this formula is unknown to the reader, it is a simple and beneficial exercise to re-establish it. To begin, take an equilateral triangle with side length $b$ (Figure~\ref{fig:equil_tri_a}). Draw a line from any corner to the midpoint of the opposing side (Figure~\ref{fig:equil_tri_b}). Now there are 2 triangles. Recalling the triangle congruency, by the side-angle-side theorem these triangles are congruent (Figure~\ref{fig:equil_tri_c}). This forces the angle that was cut with the drawn line to be bisected. Since the starting triangle was an equilateral triangle which has all angles equal to $60\degree$, the top angles are both $30\degree$ making the constructed line perpendicular to the base (Figure~\ref{fig:equil_tri_d}).
+First, recall that the area of an equilateral triangle is $A = \rfrac {\sqrt{3}} {4} \, b^2$ where $b$ is the length of any side of the triangle. If this formula is unknown to the reader, it is a simple and beneficial exercise to re-establish it. To begin, take an equilateral triangle with side length $b$ (Figure~\ref{fig:equil_tri_a}). Draw a line from any corner to the midpoint of the opposing side (Figure~\ref{fig:equil_tri_b}). Now there are 2 triangles. Recalling the triangle congruency theorems, by the side-angle-side theorem these triangles are congruent (Figure~\ref{fig:equil_tri_c}). This forces the angle that was cut with the drawn line to be bisected. Since the starting triangle was an equilateral triangle which has all angles equal to $60\degree$, the top angles are both $30\degree$ making the constructed line perpendicular to the base (Figure~\ref{fig:equil_tri_d}).
 
 \begin{figure}[h]
 	\caption{Area of Equilateral Triangle Constructions}
 	\centering
-	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[h]{0.24\textwidth}
 		\includegraphics[width=\textwidth]{equil_tri_a.pdf}
 		\caption{}
 		\label{fig:equil_tri_a}
 	\end{subfigure}
 	~
-	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[h]{0.24\textwidth}
 		\includegraphics[width=\textwidth]{equil_tri_b.pdf}
 		\caption{}
 		\label{fig:equil_tri_b}
 	\end{subfigure}
 	~
-	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[h]{0.24\textwidth}
 		\includegraphics[width=\textwidth]{equil_tri_c.pdf}
 		\caption{}
 		\label{fig:equil_tri_c}
 	\end{subfigure} \\
-	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[h]{0.24\textwidth}
 		\includegraphics[width=\textwidth]{equil_tri_d.pdf}
 		\caption{}
 		\label{fig:equil_tri_d}
 	\end{subfigure}
 	~
-	\begin{subfigure}[h]{0.3\textwidth}
+	\begin{subfigure}[h]{0.24\textwidth}
 		\includegraphics[width=\textwidth]{equil_tri_e.pdf}
 		\caption{}
 		\label{fig:equil_tri_e}
 	\end{subfigure}	
 \end{figure}
 
-Now to find the length of the constructed line $l$ (Figure~\ref{fig:equil_tri_e}). Thankfully the pythagorean theorem is all that is required for this.
+To find the length of the constructed line $l$ (Figure~\ref{fig:equil_tri_e}) apply the pythagorean theorem:
 \begin{align*}
 b^2 &= \left(\dfrac{b} {2}\right)^2 + l^2 \\
 l^2 &= b^2 - \dfrac{b^2} {4} \\
@@ -302,7 +319,7 @@ l &= \sqrt{\dfrac{3} {4} \, b^2} \\
 l &= \dfrac{\sqrt{3}} {2} \, b
 \end{align*}
 %
-Thus, using our standard triangle area formula of $A = \rfrac{1} {2} \, base * height$ we get
+Thus, using the standard triangle area formula of $A = \rfrac{1} {2} \, base * height$ we get
 \begin{align*}
 A &= \dfrac{1} {2} \, b * \dfrac{\sqrt{3}} {2} \, b \\
 A &= \dfrac{\sqrt{3}} {4} \, b^2
@@ -310,7 +327,7 @@ A &= \dfrac{\sqrt{3}} {4} \, b^2
 
 Recall the goal is to establish that the area of an equilateral triangle with a base from $(0,0)$ to $(h,k)$ (Figure~\ref{fig:setup}) will equal the area of an equilateral triangle with base length 1 times $T = h^2 + hk + k^2$. So from the above formula with $b = 1$, the resulting area should be $\mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$. 
 
-Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. Two of the side lengths are known and side length b remains to be found (Figure~\ref{fig:base_setup}). From the setup of the grid, the exterior angle at point $(h,0)$ is $60\degree$, so if a line is dropped down from point $(h,k)$ perpendicular to the t-axis the result is a triangle that was just worked with and with known dimensions. Since it is $k$ units from $(h,0)$ to $(h,k)$, the perpendicular just drawn has length $\rfrac{\sqrt{3}} {2} \, k$ and the final leg of the triangle is $\rfrac 1 2 \, k$ (Figure~\ref{fig:base_right}).
+Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \text{and} \; (h,0)$. Two of the side lengths are known and side length b remains to be found (Figure~\ref{fig:base_setup}). From the setup of the grid, the exterior angle at point $(h,0)$ is $60\degree$, so if a line is dropped down from point $(h,k)$ perpendicular to the t-axis the result is a triangle that was just worked with and has known dimensions. Since it is $k$ units from $(h,0)$ to $(h,k)$, the perpendicular just drawn has length $\rfrac{\sqrt{3}} {2} \, k$ and the final leg of the triangle is $\rfrac 1 2 \, k$ (Figure~\ref{fig:base_right}).
 
 \begin{figure}[h]
 	\centering
@@ -325,24 +342,27 @@ Now consider the triangle created by drawing lines between $(0,0), \; (h,k) \; \
 		\caption{}
 		\label{fig:base_right}
 	\end{subfigure}
+	\vspace{-20pt}
 \end{figure}
 
-Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the solution lies at the end of the pythagorean theorem (Figure~\ref{fig:equil_baselength}).
-\begin{align*}
-L^2 &= \left(\dfrac{\sqrt{3}} {2} \, k\right)^2 + \left(h+\dfrac 1 2 \, k\right)^2 \\
-&= \dfrac 3 4 \, k^2 + h^2 + hk + \dfrac 1 4 k^2 \\
-& = h^2 + hk + k^2 \\
-L & = \sqrt{h^2 + hk + k^2}
-\end{align*}
+Now the length in question, from point $(0,0)$ to $(h,k)$, is the hypotenuse of a right triangle with side lengths $\rfrac{\sqrt{3}} {2} \, k$ and $h+\rfrac 1 2 \, k$. Once again the length lies at the end of the pythagorean theorem (Figure~\ref{fig:equil_baselength}).
 
-\begin{figure}[h]
+\begin{figure}[t!]
 	\centering
 	\caption{Base Found}
 	\includegraphics[width=.45\textwidth]{ddagger3.pdf}
 	\label{fig:equil_baselength}
+	\vspace{-25pt}
 \end{figure}
 
-Now plugging this into the Area formula for b, the result is $A = \mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$, which is exactly the desired area from before! So this definitively shows that the area of an equilateral triangle with base from point $(h,0)$ to $(h,k)$ is equal to the area of $T = h^2 + hk + k^2$ equilateral triangles with base length 1. Now recall:
+\begin{align*}
+b^2 &= \left(\dfrac{\sqrt{3}} {2} \, k\right)^2 + \left(h+\dfrac 1 2 \, k\right)^2 \\
+&= \dfrac 3 4 \, k^2 + h^2 + hk + \dfrac 1 4 k^2 \\
+& = h^2 + hk + k^2 \\
+b & = \sqrt{h^2 + hk + k^2}
+\end{align*}
+
+Plugging this into the Area formula for b, the result is $A = \mathbf{ \dfrac{\sqrt{3}} {4} \, (h^2 + hk + k^2) }$, which is exactly the desired area from before! So this definitively shows that the area of an equilateral triangle with base from point $(h,0)$ to $(h,k)$ is equal to the area of $T = h^2 + hk + k^2$ equilateral triangles with base length 1. Recall:
 
 \begin{enumerate}
 	\item The triangle with base from point $(h,0)$ to $(h,k)$ represents one side of an icosahedron
@@ -353,9 +373,9 @@ Now plugging this into the Area formula for b, the result is $A = \mathbf{ \dfra
 Put it all together and the result is that a total of $3*20*(h^2 + hk + k^2) = 60 T$ proteins will fit on the capsid described.
 
 %%%%% Second geometry problem %%%%%
-While the previous work answered the first question, it is still unknown where point $P$ is located, or if it is even an integer valued point (recall Figure~\ref{fig:equil_baselength}). A quick examination of the angles at the origin provide a good starting place from which to answer this question. The angle created by lines $\overline{P(0,0)}$ and $\overline{(0,0)(h,k)}$ is $60\degree$ since the triangle is an equilateral. Similarly, the angle created by the axes is $60\degree$ by definition. Now both of these angles share a common section from the k-axis to line $\overline{(0,0)(h,k)}$, call this angle $\alpha$. This means that the remaining portion of each angle must be the same, call it $\beta$, where $\alpha + \beta = 60\degree$ (Figure~\ref{fig:equil_angles}). Since all the sides of triangle $P(0,0)(h,k)$ are the same, one path would be to try and recreate the lower, shaded triangle above the k-axis.
+While the previous work answered the first question, it is still unknown where point $P$ is located, or if it is even an integer valued point (recall Figure~\ref{fig:equil_baselength}). A quick examination of the angles at the origin provide a good starting place from which to answer this question. The angle created by lines $\overline{P(0,0)}$ and $\overline{(0,0)(h,k)}$ is $60\degree$ since the triangle is an equilateral. Similarly, the angle created by the axes is $60\degree$ by definition. Now both of these angles share a common angle from the k-axis to line $\overline{(0,0)(h,k)}$, denoted $\alpha$. This means that the remaining portion of each angle must be the same, denoted $\beta$, where $\alpha + \beta = 60\degree$ (Figure~\ref{fig:equil_angles}). Since all the sides of triangle $P(0,0)(h,k)$ are the same, one path would be to try and recreate the lower, shaded triangle above the k-axis.
 
-\begin{figure}[h]
+\begin{figure}[b!]
 	\centering
 	\caption{Locating Point P}
 	\begin{subfigure}[h]{0.45\textwidth}
@@ -370,23 +390,22 @@ While the previous work answered the first question, it is still unknown where p
 	\end{subfigure}
 \end{figure}
 
-To recreate the lower, shaded triangle, create a line from point $(0,h)$ to point P. Notice even without preset marks on the axis, this could be done simply by copying the distance $h$ using a compass and marking that distance from the origin on the k-axis. Now the resulting triangle has sides with length $\sqrt{h^2 + hk + k^2}$ and length h which come together at an angle of $\beta$. This matches the dimensions of the shaded triangle. Thus by the side-angle-side triangle congruency theorem the two smaller triangles are congruent (Figure~\ref{fig:equil_congruent}). This forces the unknown side length to be k, and the angle on the k axis to be $120\degree$, marked $\gamma$ in the figure for space.
+To recreate the lower, shaded triangle, create a line from point $(0,h)$ to point P. Notice even without preset marks on the axis, this could be done simply by copying the distance $h$ using a compass and marking that distance from the origin on the k-axis. Now the resulting triangle has sides with length $\sqrt{h^2 + hk + k^2}$ and length $h$ which come together at an angle of $\beta$. This matches the dimensions of the shaded triangle. Thus by the side-angle-side triangle congruency theorem the two smaller triangles are congruent (Figure~\ref{fig:equil_congruent}). This forces the unknown side length to be $k$, and the angle on the k axis to be $120\degree$, marked $\gamma$.
 	
 Notice that since $\gamma=120\degree$, the exterior angle of the constructed triangle at point $(0,h)$ is $60\degree$. This makes it possible to construct an equilateral triangle using the k-axis and the line $\overline{P(0,h)}$. Connect point $(0,h+k)$ to point $P$. Since two sides have length k and they come together at a $60\degree$ angle, the constructed triangle must be equilateral with side length k (Figure~\ref{fig:equil_mini}). Now everything needed to fully define point $P$ is available. Begin at the origin $(0,0)$ and go up the k-axis $h+k$ units, then go left $k$ units, parallel to the h-axis. This means that $P=(-k,h+k)$. Look at that amazing result! The third point of the original triangle (from Figure~\ref{fig:setup}) falls at an integer valued point uniquely determined by the values $h$ and $k$. 
-	
-Both questions raised about the T number have now been answered. It has been fully established that the equilateral triangle with points at $(0,0)$ and $(h,k)$ will have its third point at $(-k, h+k)$ and have the same area as T equilateral triangles with unit sides. What is more, this result was again found using nothing more than basic geometry construction skills.
-	
-\begin{figure}[h]
+
+\begin{figure}[h!]
 	\centering
 	\caption{Location of Point P}
 	\includegraphics[width=.45\textwidth]{ddagger_end.pdf}
 	\label{fig:equil_mini}
 \end{figure}
+	
+Both questions raised about the T number have now been answered. It has been fully established that the equilateral triangle with points at $(0,0)$ and $(h,k)$ will have its third point at $(-k, h+k)$ and have the same area as T equilateral triangles with unit sides. What is more, this result was again found using nothing more than basic geometry construction skills.
 
 \subsubsection{Solution 2: Linear Algebra} %%%%% Linear Algebra%%%%%
 \paragraph{}
-
-While the geometric solution provided above does work, it can be a bit difficult to discover. It is there result of trial an error using geometric constructions and thus is the product of multiple dead ends. There is a slightly more direct method for solving these same questions by employing some slightly higher mathematical techniques, namely linear algebra. The following will explore these techniques.
+While the geometric solution provided above does work, it can be a bit difficult to discover. It is the result of trial and error using geometric constructions and thus is the product of multiple dead ends. There is a slightly more direct method for solving the same questions by employing some slightly higher mathematical techniques, namely linear algebra. The following will explore that technique.
 
 Because both problems occur in a space defined by the $h$ and $k$ axes which exist at $60\degree$ to one another, the first step in attacking these problems will be to establish a matrix for the transformation from the standard basis for $\mathbb{R}^2$, call it $\mathcal{E} = \{e_1,e_2\}$, and a basis derived from the $h$ and $k$ axes, call it $\mathcal{B} = \{b_1, b_2\}$ (see Figure~\ref{fig:basis_vectors}). This is done by finding a representation for both $b_1$ and $b_2$ in $\mathcal{E}$ and then using those representations as the columns of a matrix. 
 
@@ -410,22 +429,25 @@ Because both problems occur in a space defined by the $h$ and $k$ axes which exi
 \end{figure}
 %
 \begin{wrapfigure}{r}{0.35\textwidth}
+	\vspace{-20pt}
 	\centering
 	\caption{Converting $b_2$ to $\mathcal{E}$}
 	\includegraphics[width=.3\textwidth]{basis_convert.pdf}
 	\vspace{-5pt}
 	\label{fig:basis_convert}
+	\vspace{-60pt}
 \end{wrapfigure}
 %
 Let $T$ represent the transformation from basis $\mathcal{B}$ to $\mathcal{E}$. For simplicity let $T(b_1) = e_1$ so $T(1,0) = (1,0)$. Now using the results previously obtained about equilateral triangles and the fact that we want the basis vectors to be of unit length, it is easy to see that $T(b_2) = \rfrac{1}{2} e_1 + \rfrac {\sqrt{3}}{2} e_2$, or $T(0,1) = (\rfrac{1}{2} , \rfrac{\sqrt{3}}{2})$ (Figure~\ref{fig:basis_convert}). Recall that the transformation matrix, $T$, from basis $\mathcal{B}$ to $\mathcal{E}$ is represented by using the two vectors found above as columns in a matrix. So as a matrix:
 %
-\begin{align*}
+\begin{align}
 	T = \bigg[ \big[b_1\big]_\mathcal{E} , \big[b_2\big]_\mathcal{E}  \bigg]
 	= \begin{bmatrix}
 		1 &  \rfrac{1}{2}\\
 		0 & \rfrac{\sqrt{3}}{2}
-	\end{bmatrix}	
-\end{align*}
+	\end{bmatrix}
+	\label{eq:T}
+\end{align}
 %
 Similarly, to go from $\mathcal{E}$ to $\mathcal{B}$ simply use $T^{-1}$. To do so, recall that for any 2x2 matrix $A$ with non-zero determinant:
 %
@@ -442,13 +464,14 @@ Similarly, to go from $\mathcal{E}$ to $\mathcal{B}$ simply use $T^{-1}$. To do 
 	\end{bmatrix}
 \end{align*} \vspace{-25pt}
 %
-\begin{align*}
+\begin{align}
 	\text{thus} \quad T^{-1} = \dfrac{2}{\sqrt{3}}
 	\begin{bmatrix}
 		\rfrac{\sqrt{3}}{2} & -\rfrac{1}{2} \\
 		0 & 1
 	\end{bmatrix}
-\end{align*}
+	\label{eq:T_inv}
+\end{align}
 %
 Now it is possible to freely transition between the bases $\mathcal{B}$ and $\mathcal{E}$. Since $\mathcal{E}$ is the standard basis for $\mathbb{R}^2$, the standard distance formula defined by the Euclidean norm applies. That is, for any vector $(x,y)$ the length of the vector is given by:
 %
@@ -482,7 +505,7 @@ Thus
 	&= \sqrt{h^2 + hk + k^2}
 \end{align*}
 %
-Notice that this is the exact same result obtained from the geometric solution! From here it would be a simple matter to again apply the area formula for an equilateral triangle, and arrive at the conclusion that the triangle originally shown in Figure~\ref{fig:setup} has $Area = \rfrac{\sqrt{3}}{4}\sqrt{h^2 + hk + k^2}^2 = \rfrac{\sqrt{3}}{4}h^2 + hk + k^2$. This confirms once again that $T=h^2 +hk +k^2$ equilateral triangles with unit sides fit in a an equilateral triangle with one side from $(0,0)$ to $(h,k)$.
+Notice that this is the exact same result obtained from the geometric solution! From here it would be a simple matter to again apply the area formula for an equilateral triangle, and arrive at the conclusion that the triangle originally shown in Figure~\ref{fig:setup} has $Area = \rfrac{\sqrt{3}}{4}\left(\sqrt{h^2 + hk + k^2}\right)^2 = \rfrac{\sqrt{3}}{4}h^2 + hk + k^2$. This confirms once again that $h^2 +hk +k^2$ equilateral triangles with unit sides fit in a an equilateral triangle with one side from $(0,0)$ to $(h,k)$.
 
 Approaching the second problem, the location of point $P$, is once again rather straightforward in linear algebra, although a beneficial side track will be taken during the work. To find the location of point $P$ simply rotate vector $(h,k)$ $60\degree$ counter-clockwise about the origin. Doing so will require the use of the standard rotation matrix in $\mathbb{R}^2$, so the first, and only, side trip in this problem will be to establish the rotation matrix.
 
@@ -505,7 +528,7 @@ The idea is similar to finding the matrix which allows passage between the bases
 	\label{fig:rotations}
 \end{figure}
 
-Since both basis vectors are of unit length, any rotation about the origin will leave them on the unit circle (Figure~\ref{fig:rotations}). This means that when $e_1$ is rotated by $\theta$, the result is the point on the unit sphere given by $\theta$, which is $(\cos{\theta} , \sin{\theta})$ (Figure~\ref{fig:rotate_e1}). Thus $R_\theta(e_1) = (\cos{\theta} , \sin{\theta})$. Now notice that if $e_2$ is rotated by $\theta$ the resulting point is equivalent to the point on the unit circle defined by $\theta + 90\degree$. Thus $R_\theta(e_2) = (\cos{(\theta + 90)} , \sin{(\theta + 90)})$. At this point $R_\theta$ could be represented by the matrix:
+Since both basis vectors are of unit length, any rotation about the origin will leave them on the unit circle (Figure~\ref{fig:rotations}). This means that when $e_1$ is rotated by $\theta$, the result is the point on the unit sphere given by $\theta$, which is $(\cos{\theta} , \sin{\theta})$ (Figure~\ref{fig:rotate_e1}). Thus $R_\theta(e_1) = (\cos{\theta} , \sin{\theta})$. Notice that if $e_2$ is rotated by $\theta$ the resulting point is equivalent to the point on the unit circle defined by $\theta + 90\degree$. Thus $R_\theta(e_2) = (\cos{(\theta + 90)} , \sin{(\theta + 90)})$. At this point $R_\theta$ could be represented by the matrix:
 %
 \begin{align*}
 	\begin{bmatrix}
@@ -514,26 +537,26 @@ Since both basis vectors are of unit length, any rotation about the origin will 
 	\end{bmatrix}
 \end{align*}
 %
-But this matrix is a bit more cumbersome than desired and can be cleaned up using some simple trigonometric identities. While they shall not be proven here, the identities $\cos{(\theta + 90)} = -\sin{\theta}$ and $\sin{(\theta + 90)} = \cos{\theta}$ are rather standard and all that are needed to clean up the above matrix. Thus the rotation matrix for $\mathbb{R}^2$ is:
-\begin{align*}
+But this matrix is a bit more cumbersome than desired and can be cleaned up using some simple trigonometric identities. While they shall not be proven here, the identities $\cos{(\theta + 90)} = -\sin{\theta}$ and $\sin{(\theta + 90)} = \cos{\theta}$ are rather standard and all that are needed to clean up the above matrix. Using these identities, the rotation matrix for $\mathbb{R}^2$ becomes:
+\begin{align}
 	R_\theta =
 	\begin{bmatrix}
 		\cos{\theta} & -\sin{\theta} \\
 		\sin{\theta} & \cos{\theta}
 	\end{bmatrix}
-\end{align*}
+	\label{eq:rotate}
+\end{align}
 
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
-	\vspace{-15pt}
-	\caption{Rotation via Linea Transformation}
+	\caption{Rotation via Linear Transformation}
 	\includegraphics[width=.3\textwidth]{linear_trans.pdf}
-	\vspace{-15pt}
+	\vspace{-30pt}
 	\label{fig:linear_transform}
 \end{wrapfigure}
 %
-Now since this matrix was determined using $e_1$ and $e_2$ it will only work in $\mathcal{E}$. Luckily, (GET THEOREM FROM FRALEIGH) rotation in $\mathcal{B}$, represented by $\widetilde{R_\theta}$ is equivalent to performing a change of basis from $\mathcal{B}$ to $\mathcal{E}$, using the rotation matrix $R_\theta$, and then changing bases back to $\mathcal{B}$ (Figure~\ref{fig:linear_transform}). Now recall that the goal was to rotate by $60\degree$
-
+Now since this matrix was determined using $e_1$ and $e_2$ it will only work in $\mathcal{E}$. Luckily, rotation in $\mathcal{B}$, represented by $\widetilde{R_\theta}$ is equivalent to performing a change of basis from $\mathcal{B}$ to $\mathcal{E}$, using the rotation matrix $R_\theta$, and then changing bases back to $\mathcal{B}$ (Figure~\ref{fig:linear_transform}). Now let $\theta = 60$ as the goal was to rotate by $60\degree$ and use equations \ref{eq:T} \ref{eq:T_inv} and \ref{eq:rotate} as directed by Figure~\ref{fig:linear_transform}:
+%
 \begin{align*}
 	\widetilde{R_{60}} &= T^{-1} R_{60} T \\
 	&= \dfrac{2}{\sqrt{3}}
@@ -596,7 +619,7 @@ Now since this matrix was determined using $e_1$ and $e_2$ it will only work in 
 	\end{bmatrix}
 \end{align*}
 %
-Recall the goal was to rotate the vector $(h,k)$ in $\mathcal{B}$ by $60\degree$. 
+Applying $\widetilde{R_{60}}$ to the vector $(h,k)$ thus rotates the vector by $60\degree$ in $\mathcal{B}$.
 %
 \begin{align*}
 	\widetilde{R_{60}}(h,k) =
@@ -612,13 +635,13 @@ Recall the goal was to rotate the vector $(h,k)$ in $\mathcal{B}$ by $60\degree$
 	\end{bmatrix} =
 	(-k , h + k)
 \end{align*}
-So as before, since $\widetilde{R_{60}}(h,k) = (-k , h + k)$, the point $P$ of the initial triangle in Figure~\ref{fig:setup} is an integer valued point uniquely defined by $h$ and $k$, given by $P = (-k , h + k)$.
+So as before, since $\widetilde{R_{60}}(h,k) = (-k , h + k)$, the point $P$ of the initial triangle in Figure~\ref{fig:setup} is an integer valued point uniquely defined by $h$ and $k$, given by $P = (-k , h + k)$. Thus two complete solutions have been provided to the questions arising from Capsar and Klug's T-number.
 
-ONE LAST SENTENCE, ABOUT HEY THIS WAS COOL.
 \subsection{Protein Shape}
-While this problem plagued me during my studies of capsids, it was not one that I was able to solve on my own. The following solutions are adaptations of the explanations provided in \cite[p 5-7]{Mannige:2009}.
 \paragraph{}
-The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids (see for instance Figure~\ref{fig:life_cycle})with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids (FIGURE?). But this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
+While this problem plagued me during my studies of capsids, it was not one that I was able to solve on my own. The following solutions are adaptations of the explanations provided by Ranjan Mannige in \cite[p 5-7]{Mannige:2009}.
+\paragraph{}
+The second problem is not one that comes directly from the theory of quasi-equivalence or icosahedral symmetry. Instead, the second problem is a result of the standard images used in most papers on spherical viruses. When displaying capsids, most papers represent the protomeres as trapezoids (see for instance Figure~\ref{fig:life_cycle}, \ref{fig:capsid_color}, \ref{fig:num_color}, \ref{fig:class_ex}) with little to no explanation. The simplest explanation is that it is now possible to see the proteins in such clarity that they are known to resemble trapezoids. But this is bothersome. Should such a mathematically regular result have been expected and can it be explained? To state it another way, is there a mathematical justification for the protomer being represented by a tradezoid? Again two methods for answering this question will be provided. The first will require no mathematical skills beyond that of a high-schooler, only some problem solving and algebraic manipulation of formulas. The second, while it can be viewed as a product of group theory, will boil down to nothing more than understanding symmetry.
 
 \subsubsection{Solution 1: Euler's Polyhedral Formula} \label{sec:euler}
 \paragraph{}
@@ -632,15 +655,20 @@ Euler's polyhedral formula is a standard, well known formula which relates the n
 	\centering
 	\caption{$T = 13$ Capsid Model}
 	\includegraphics[width = 0.30\textwidth]{capsid_T13.pdf}
+	\begin{minipage}[h]{.35\textwidth}
+		\begin{footnotesize}
+		This figure is adapted from \textit{figure 1} in \cite{Mannige:2009}.
+		\end{footnotesize}
+	\end{minipage}
 	\label{fig:T13}
-	\vspace{-15pt}
+	\vspace{-35pt}
 \end{wrapfigure}
 
-Caspar and Klug's theory states that all icosahedral virus capsids are made up of 12 pentagonal capsomeres (represented in grey in Figure~\ref{fig:T13}) and $10(T-1)$ hexagonal capsomeres (represented in red in Figure~\ref{fig:T13}). Additionally, the protomeres come together in groups of 3 to form equilateral triangles since they overall capsid has 3-point rotational symmetry axes. This information, along with Equation~(\ref{eq:euler}) should be enough to shed some light on the number of possible sides per protomer, call this number $\sigma$ for ``sides".
+Recall from Section \ref{sec:CK}, that Caspar and Klug's theory states that all icosahedral virus capsids are made up of 12 pentagonal capsomeres (grey in Figure~\ref{fig:T13}) and $10(T-1)$ hexagonal capsomeres (red in Figure~\ref{fig:T13}). Additionally, the protomers come together in groups of 3 to form equilateral triangles since the overall capsid has 3-point rotational symmetry axes. This information, along with Equation~(\ref{eq:euler}) should be enough to shed some light on the number of possible sides per protomer, call this number $\sigma$ for ``sides".
 
 Since the number of faces of the overall polyhedra corresponds to the number of individual proteins the following identity holds:
 \begin{align}
-	F = 60 T
+	F = P = 60 T
 	\label{eq:f}
 \end{align}
 %
@@ -656,7 +684,7 @@ Now when it comes to the vertices, a little ingenuity is required. The theory of
 	\label{eq:vc}
 \end{align}
 %
-The remaining vertices $(V_R)$ must all be 3-point vertices, that is where 3 edges come together, as the final figure has 3-point rotational symmetry. So for each protomer, one of its edges is used up in connecting to the capsomer's center vertex, the $V_C$, and of the remaining $(\sigma - 1)$ sides, each one goes to a 3-point vertex which is shared with 2 other proteins. Putting this all together, remembering there are $60 T$ protomeres, gives:
+The remaining vertices $(V_R)$ must all be 3-point vertices, that is where 3 edges come together, as the final figure has 3-point rotational symmetry. So for each protomer, one of its edges is used up in connecting to the capsomer's center vertex, the $V_C$, and of the remaining $(\sigma - 1)$ sides, each one goes to a 3-point vertex which is shared with 2 other proteins. Putting this all together, remembering there are $60 T$ protomers, gives:
 \begin{align}
 	V_R = \dfrac{60 T}{3} (\sigma - 1) = 20 T (\sigma - 1) = 20T\sigma - 20T
 	\label{eq:vr}
@@ -677,7 +705,7 @@ Finally, $E$, $F$, and $V$ are defined in terms of $\sigma$ and $T$, and thus su
 	\sigma &= 5
 \end{align*}
 %
-This means that the individual protein units will have 5 sides, or edges, regardless of the T-number! While this is an amazing result, it is not quite what was expected. The goal was to explain why the standard protomer is represented as a trapezoid, but trapezoids have 4 sides, not 5, so what is going on? In the paper ``On the Tileable Nature of Virus Capsids and the Role of Topological Constraints in Natural Capsid Design," Ranjan V. Mannige explains that there are only a limited number of ways to cover convex pentagons with non-overlapping tilings. Furthermore, there is only one type of tile with 5 sides which can cover the icosahedron, which is classified as a \textit{Type-5} and represented in Figure~\ref{fig:tile5}. From here, all that is needed is to note that this tiling is equivalent to the trapezoidal tiling seen in nature, represented in Figure~\ref{fig:tile_trap}. 
+This means that the individual protein units will have 5 sides, or edges, regardless of the T-number! While this is an amazing result, it is not quite what was expected. The goal was to explain why the standard protomer is represented as a trapezoid, but trapezoids have 4 sides, not 5, so what is going on? In the paper ``On the Tileable Nature of Virus Capsids and the Role of Topological Constraints in Natural Capsid Design," Ranjan V. Mannige explains that there are only a limited number of ways to cover convex pentagons with non-overlapping tilings. Furthermore, there is only one type of tile with 5 sides which can cover the icosahedron. It is classified as a \textit{Type-5} and represented in Figure~\ref{fig:tile5}. From here, all that is needed is to note that this tiling is equivalent to the trapezoidal tiling seen in nature, represented in Figure~\ref{fig:tile_trap}. 
 \begin{figure}[h]
 	\centering
 	\caption{Individual Protein Shape}
@@ -692,14 +720,18 @@ This means that the individual protein units will have 5 sides, or edges, regard
 		\caption{Trapezoidal protein shape}
 		\label{fig:tile_trap}
 	\end{subfigure} \\
-	Note that the two shapes are topologically equivalent.
+	\begin{minipage}[h]{.75\textwidth}
+		\begin{footnotesize}
+			Note that the two shapes are topologically equivalent. Figure is adapted from \textit{figure 5} in \cite{Mannige:2008}.
+		\end{footnotesize}
+	\end{minipage}
 	\label{fig:tiles}
 \end{figure}
 
-The two different protein shapes represented in Figure~\ref{fig:tiles} are equivalent because the base of the trapezoidal unit is split into two edges. When considering vertices, any place where edges diverge is a vertex. This means that the base of the trapezoidal unit must be split by a vertex because the edge of two other adjoining trapezoids join into the base. This means that the natural occurrence of trapezoidal protein units within icosahedral capsids is not a random occurrence, but is to be expected due to Euler's Polyhedral Formula (\ref{eq:euler}).
+The two different protein shapes represented in Figure~\ref{fig:tiles} are equivalent because the base of the trapezoidal unit is split into two edges. When considering vertices, any place where edges diverge is a vertex. This means that the base of the trapezoidal unit must be split by a vertex because the edge of two other adjoining trapezoids join into the base. So, the natural occurrence of trapezoidal protein units within icosahedral capsids is not a random occurrence, but is to be expected due to Euler's Polyhedral Formula (\ref{eq:euler}).
 
 \subsubsection{Solution 2: Necessary Symmetry}
-A second technique for justifying the need for 5 sided, and therefore trapezoidal, protein units is by examining the symmetry needs of the overall capsid. It was established by Caspar and Klug, and explained previously, that the spherical capsids conform to icosahedral symmetry. Additionally, it was noted that due to the physical nature of the protomeres, reflexive symmetry axes are not possible. This meant that out of the two types of icosahedral symmetry, full or rotational, only the rotation symmetry was possible. The importance of this fact is that the capsid may not have any reflexive axes. Knowing that six protomeres come together to form the hexamers, it is possible to systematically examine the available numbers of sides for the proteins, and eliminate those that will not work. 
+A second technique for justifying the need for 5 sided, and therefore trapezoidal, protein units is by examining the symmetry needs of the overall capsid. It was established by Caspar and Klug, and explained previously, that the spherical capsids conform to icosahedral symmetry. Additionally, it was noted that due to the physical nature of the protomers, mirror symmetry axes are not possible because the individual proteins have a specific left and right hand orientation. Recall from Section~\ref{sec:C&W}, the asymmetric nature of the carbon atoms present in the capsid proteins does not allow for mirror axes. This meant that out of the two types of icosahedral symmetry, full or rotational, only the rotation symmetry was possible. The importance of this fact is that the capsid may not have any mirror axes. Knowing that six protomers come together to form the hexamers, it is possible to systematically examine the available numbers of sides for the proteins, and eliminate those that will not work. 
 
 \begin{figure}[h]
 	\centering
@@ -724,15 +756,15 @@ A second technique for justifying the need for 5 sided, and therefore trapezoida
 	\\
 	\begin{minipage}[h]{.85\textwidth}
 		\begin{footnotesize}
-		Row A shows 3, 4, and 5 sided protomer shapes in their hexamer form. Row B shows them as single units. Note that the darkened hexagons denote locations of 6-fold symmetry, the triangles denote 3-fold symmetry, and the rectangles denote 2-fold symmetry. The dashed lines denote the mirror, or reflexive, symmetry axes.
+		Row \textbf{A} shows 3, 4, and 5 sided protomer shapes in their hexamer form. Row \textbf{B} shows them as single units. Note that the darkened hexagons denote locations of 6-fold symmetry, the triangles denote 3-fold symmetry, and the rectangles denote 2-fold symmetry. The dashed lines denote the mirror, or reflexive, symmetry axes. This figure is an adaptation of \textit{figure 6} in \cite{Mannige:2008}.
 		\end{footnotesize}
 	\end{minipage}
 	\label{fig:mirror}
 \end{figure}
 
-First consider a simple 3 sided protomer, shown in Figure~\ref{fig:sigma3}. An equilateral triangle is the only 3 sided polygon which provides the hexamer with 2, 3, and 5-fold rotational symmetry axes. But, an equilateral triangle has a total of 6 reflexive symmetry axes, as shown. If the triangle is ``flipped over" across any dotted line, the resulting shape is the same as the original. That is to say that the resulting figure could be placed directly over the original. But, as explained in Section~\ref{sec:C&W}, the asymmetric nature of the carbon atoms present in the capsid proteins does not allow for reflexive axes. Thus, the 3 sided protein cannot work.
+First consider a simple 3 sided protomer, shown in Figure~\ref{fig:sigma3}. An equilateral triangle is the only 3 sided polygon which provides the hexamer with 2, 3, and 5-fold rotational symmetry axes. But, an equilateral triangle has a total of 6 mirror symmetry axes, as shown. If the triangle is ``flipped over" across any dotted line, the resulting shape is the same as the original. That is to say that the resulting figure could be placed directly over the original. Thus, the 3 sided protein cannot work.
 
-Next, try a 4 sided protomer, as in Figure~\ref{fig:sigma4}. At first glance this may appear to be the best shape for the protein subunit. Three kites, such as that in the figure mentioned, can come together to form an equilateral triangle. It is known that the protein subunits must be able to come together to form an equilateral triangle since this is face of the icosahedron, so using the simplest shape to do so would make the most sense. But, once again, the kite has 5 reflexive axes. For instance, flip the shape over any one of its edges and it can still be set back upon the original figure. So, as with the 3 sided protomer, the 4 sided will not work.
+Next, try a 4 sided protomer as in Figure~\ref{fig:sigma4}. At first glance this may appear to be the best shape for the protein subunit. Three kites, such as that in the figure mentioned, can come together to form an equilateral triangle. It is known that the protein subunits must be able to come together to form an equilateral triangle since this is face of the icosahedron. Using the simplest shape to do so would make the most sense. But, once again, the kite has 5 mirror axes. For instance, flip the shape over any one of its edges and it can still be set back upon the original figure. So, as with the 3 sided protomer, the 4 sided will not work.
 
 Finally, consider a 5 sided protomer, shown in Figure~\ref{fig:sigma5}. Recall that in Section~\ref{sec:euler} it was mentioned that the trapezoid is topologically equivalent to the \textit{Type-5} protein shape shown in Figure~\ref{fig:tiles}, due to the base being split into 2 edges by the capsomer construction. Now notice that while the trapezoid has a reflexive axis through the midpoint of the top and base, there are no reflexive axes which extend throughout the entire hexamer. Thus, the five sided trapezoid is the protein shape with the smallest number of possible sides. This is an amazing, although expected, result to have been achieved using no more than an understanding of reflexive and rotational symmetry. 
 
